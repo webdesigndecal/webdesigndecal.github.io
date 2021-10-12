@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Web Design DeCal</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="A 2 unit course in UC Berkeley for anyone who wants to create a beautiful website." />
+	<meta property="og:title" content="Web Design DeCal" />
+	<meta property="og:url" content="https://www.wdd.io/" />
+	<meta property="og:image" content="https://www.wdd.iostatic/thumbnails/logo.png" />
+	<meta property="og:description" content="A 2 unit course in UC Berkeley for anyone who wants to create a beautiful website." />
+	<meta property="og:site_name" content="Web Design DeCal" />
+	<meta name="twitter:title" content="Web Design DeCal">
+	<meta name="twitter:description" content="A 2 unit course in UC Berkeley for anyone who wants to create a beautiful website.">
+	<meta name="twitter:image" content="https://www.wdd.iostatic/thumbnails/logo.png">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="static/icons/favicon.ico" %}" />
+	<!-- This should come before any load-blocking script and link:style tags -->
+	<script type="text/javascript">
+		if (window.innerWidth < 960) {
+			window.location.href = '/mobile/';
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="static/css/promotional.css" %}" />
+	<script type="text/javascript" src="static/js/vendor/jquery-1.8.3.min.js" %}" charset="utf-8"></script>
+	<script type="text/javascript" src="static/js/vendor/jquery-ui-1.9.2.min.js" %}" charset="utf-8"></script>
+	<script type="text/javascript" src="static/js/vendor/waypoints.min.js" %}"></script>
+	<script type="text/javascript" src="static/js/vendor/masonry.pkgd.min.js" %}"></script>
+	<script type="text/javascript" src="static/js/promotional.js" %}" charset="utf-8"></script>
+	<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-52393347-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<body data-page="cover" data-window="front" data-front="cover" data-back="about">
+	<div id="viewport" class="viewport-cover">
+        <div id="banner"><p id="banner-text"><!-- populated via js --></p><button id="banner-btn">Got it!</button></div>
+		<div class="content">
+			<div id="cover">
+				<div id="cover-header">
+					<div id="cover-overlay"></div>
+					<div id="cover-content">
+						<div id="cover-heading">Web Design DeCal</div>
+						<div id="cover-subheading">A 2-unit course for anyone who wants to create a <strong>beautiful</strong> website.</div>
+						<div id="cover-action">
+							<span id="cover-action-button"><!-- red cta button added via js --></span>
+							<a id="learn-more" class="cover-action-item">Learn More</a>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div id="cover-footer">
+					<div class="slide-overlay"></div>
+				</div>
+			</div>
+			<div id="about" class="slide">
+				<div class="slide-overlay"></div>
+			</div>
+			<div id="curriculum" class="slide">
+				<div class="slide-overlay"></div>
+			</div>
+			<div id="schedule">
+				<div id="schedule-wrapper">
+					<div class="schedule-item" data-week="1">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 1</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Introduction to Web Design</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">HTML & the Structure of Websites</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="2">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 2</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Visual Hierarchy & Spacing</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">CSS Selectors & Visual Rules</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="3">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 3</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Typography</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">CSS Box Model / Intro to Layouts</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="4">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 4</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Color Theory</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">CSS Display & Positioning</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="5">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 5</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Grids & Columns, Images & Layouts</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">CSS Flexbox</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="6">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 6</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Responsive Design</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">Responsive Layouts</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="7">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 7</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Motion, Flow & Aesthetics</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">CSS Animations</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="8">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 8</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Intro to HCD</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">Intro to JavaScript</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="9">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 9</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Dark Design</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">JavaScript .getElementById</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="10">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 10</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Accessibility</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">Event Handlers & Conditionals</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="11">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 11</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Finding Inspiration / Building a Portfolio</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">Arrays, Loops & Libraries</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="schedule-item" data-week="12">
+						<div class="schedule-container">
+							<div class="schedule-week">
+								<div class="schedule-week-title">Week 12</div>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-section schedule-section-design">
+									<div class="schedule-section-label">Design</div>
+									<div class="schedule-section-title">Design Careers</div>
+								</div>
+								<div class="schedule-section schedule-section-programming">
+									<div class="schedule-section-label">Programming</div>
+									<div class="schedule-section-title">Frontend in the Industry</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="instructor" class="slide">
+				<div class="slide-caption-container">
+					<div class="slide-caption">Instructors</div>
+					<div class="clear"></div>
+				</div>
+				<div class="slide-overlay"></div>
+			</div>
+			<div id="faq" class="slide">
+				<div class="slide-overlay"></div>
+				<div id="faq-header">
+					<div id="faq-title">Frequently Asked Questions</div>
+					<div id="faq-subtitle">Here are the top questions we have gotten over the past few semesters</div>
+				</div>
+				<div id="faq-contact">
+					<div id="faq-contact-caption">Have a question that's not listed here?</div>
+					<a href="mailto:ask@wdd.io"><div id="faq-contact-action">
+						<div id="faq-contact-action-icon"><img class="img-scaled" src="static/icons/mail_color.svg" /></div>
+						<div id="faq-contact-action-caption">Send us an email</div>
+					</div></a>
+				</div>
+				<div id="faq-content">
+					<!-- populated via js -->
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="apply" class="slide">
+				<div class="slide-overlay"></div>
+			</div>
+		</div>
+	</div>
+	<div class="window-container window-container-scaled window-container-inactive">
+		<div id="window-header">
+			<div class="window-header-dot"></div>
+			<div class="window-header-dot"></div>
+			<div class="window-header-dot"></div>
+			<div class="window-header-caption"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="window window-active-cover">
+			<div id="window-cover" class="window-content"><img class="img-scaled-wh" src="static/images/demo.jpg" /></div>
+			<div id="window-about" class="window-content">
+				<div id="about-heading">Build a website from the ground up.</div>
+				<div id="about-content"><p>The demand for learning web programming is at an all-time high, yet for most it's a question of “where do I start?” The answer is here. As great as online courses are, nothing beats an in-person class with passionate instructors and compelling assignments. No matter what your major is, by the end of the semester, you will have built a website using HTML 5, CSS 3, and Javascript. Along the way, you'll pick up web design philosophies and be able to recreate modern design trends like responsive design, flat UI, and skeuomorphism.</p><p>Note that this course covers web design only — we will not cover server-side programming like Django and PHP. That said, we consider this far more than a DeCal. Every detail from assignments to each word spoken in lecture is carefully chosen to provide the best possible learning experience. We can't wait to see you in the classroom.</p></div>
+				<div id="about-panel">
+					<div class="about-panel-item">
+						<div class="about-panel-icon"><img class="img-scaled" src="static/icons/workload.svg" /></div>
+						<div class="about-panel-info">
+							<div class="about-panel-label">Workload</div>
+							<div class="about-panel-content">2 Units</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="about-panel-item">
+						<div class="about-panel-icon"><img class="img-scaled" src="static/icons/time.svg" /></div>
+						<div class="about-panel-info">
+							<div class="about-panel-label">Time</div>
+							<div class="about-panel-content">2.5 hrs</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="about-panel-item">
+						<div class="about-panel-icon"><img class="img-scaled-wh" src="static/icons/door.svg" /></div>
+						<div class="about-panel-info">
+							<div class="about-panel-label">Prerequisites</div>
+							<div class="about-panel-content">None!</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="window-curriculum" class="window-content">
+				<div id="curriculum-design" class="curriculum-item">
+					<div class="curriculum-heading">Design</div>
+					<div class="curriculum-content"><p>Each lecture is split into two sections. Design section encourages you to challenge every design decision you've ever seen on webpages. We also love to discuss what makes well-designed sites on Siteinspire <a href="http://www.siteinspire.com">(www.siteinspire.com)</a> so fascinating to interact with.</p><p>About half of design section is devoted to learning the topic of the day. You'll be amazed how positioning, spacing, and a pinch of Javascript magic can make a plain page gorgeous. Our brilliant Teaching Staff finish each section by guiding the class through an awesome hands-on activity.</p></div>
+					<div class="curriculum-watermark"><img class="img-scaled" src="static/icons/design.svg" /></div>
+				</div>
+				<div id="divider">
+					<div id="divider-caption">Meets</div>
+				</div>
+				<div id="curriculum-programming" class="curriculum-item">
+					<div class="curriculum-heading">Programming</div>
+					<div class="curriculum-content">
+						<p>Programming section is all about rolling up your sleeves and diving into the source code. Get ready to have your mind blown as you finally learn how those crazy 3D transforms happen, or how to make those fullscreen slideshow backgrounds. You'll also fall in love with Google Chrome's Web Inspector, the greatest development tool in history, ever.</p>
+						<p>Our beloved Teaching Staff do a more code-based hands-on activity to finish off programming section. It's typically awesome, because our Teaching Staff are likewise awesome.</p>
+					</div>
+					<div class="curriculum-watermark"><img class="img-scaled" src="static/icons/code.svg" /></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="window-schedule" class="window-content window-schedule-1">
+				<div class="window-demo-container">
+					<div class="window-demo-header">
+						<div class="window-demo-title">Say hello to Lorem Ipsum</div>
+						<div class="window-demo-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+						<div class="window-demo-background"><img class="img-scaled" src="static/images/otter2.jpg" /></div>
+						<div class="window-demo-overlay"></div>
+					</div>
+					<div class="window-demo-content">
+						<div class="window-demo-canvas">
+							<div class="window-demo-content-info">
+								<div class="window-demo-content-info-thumbnail"><img class="img-scaled" src="static/icons/user.svg" /></div>
+								<div class="window-demo-content-info-author">By Mr. Ipsum, June 13, 2014, 12:53PM</div>
+							</div>
+							<div class="window-demo-content-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+						</div>
+					</div>
+				</div>
+				<div id="window-demo-prototype">
+					<div id="window-demo-prototype-header">
+						<div id="window-demo-prototype-title"></div>
+						<div id="window-demo-prototype-subtitle"></div>
+					</div>
+					<div id="window-demo-prototype-content">
+						<div id="window-demo-prototype-canvas">
+							<div id="window-demo-prototype-thumbnail"></div>
+							<div id="window-demo-prototype-author"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+							<div class="window-demo-prototype-line"></div>
+						</div>
+					</div>
+				</div>
+				<div id="window-demo-modal-overlay"></div>
+				<div id="window-demo-modal-group" class="window-demo-modal">
+					<div class="window-demo-modal-content">
+						<div class="window-demo-modal-icon"><img class="img-scaled" src="static/icons/pptx.svg" /></div>
+						<div class="window-demo-modal-caption">Group Project Presentation</div>
+					</div>
+				</div>
+				<div id="window-demo-modal-final" class="window-demo-modal">
+					<div class="window-demo-modal-content">
+						<div class="window-demo-modal-icon"><img class="img-scaled" src="static/icons/pptx.svg" /></div>
+						<div class="window-demo-modal-caption">Final Project Presentation</div>
+					</div>
+				</div>
+			</div>
+			<div id="window-instructor" class="window-content">
+
+				<div id="window-instructor-content">
+					<!-- populated via js -->
+				</div>
+
+				<div id="window-instructor-ta">
+					<div id="window-instructor-ta-header">
+						<div id="window-instructor-ta-title">Teaching Staff</div>
+						<!-- commented the following line because space constraints -->
+						<!-- <div id="window-instructor-ta-subtitle">This class would not be possible without our fantastic staff!</div> -->
+					</div>
+					<div id="window-instructor-ta-content">
+						<!-- populated via js -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="apply-container">
+		<div id="apply-header">
+			<div class="slide-overlay"></div>
+			<div id="apply-content">
+				<div id="apply-hero">
+					<div class="apply-hero-line">This class seeks to empower you with:</div>
+					<div class="apply-hero-line">the confidence to <u>code</u></div>
+					<div class="apply-hero-line">the confidence to <u>design</u></div>
+					<div class="apply-hero-line"><span id="apply-hero-deemph">and altogether - </span>the confidence to <u>create</u>.</div>
+				</div>
+				<div id="apply-action">
+					<!-- populated via js -->
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div id="apply-logo"><div id="apply-logo-badge"><img class="img-scaled" src="static/icons/logo.png" /></div></div>
+		<div id="apply-footer">
+			<div id="apply-footer-heading">Web Design DeCal</div>
+			<div id="apply-footer-subheading">Taught with Lots of Love and Caffeine at UC Berkeley.</div>
+			<div class="slide-overlay"></div>
+		</div>
+	</div>
+	<div id="nav" class="nav-active-cover">
+		<div id="nav-progress"></div>
+		<div id="nav-spine"></div>
+		<div id="nav-content">
+			<div id="nav-item-cover" class="nav-item nav-item-active">Home</div>
+			<div id="nav-item-about" class="nav-item">About</div>
+			<div id="nav-item-curriculum" class="nav-item">Curriculum</div>
+			<div id="nav-item-schedule" class="nav-item">Schedule</div>
+			<div id="nav-item-instructor" class="nav-item">Instructors</div>
+			<div id="nav-item-faq" class="nav-item">FAQ</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="guide">
+		<div id="guide-caption">Scroll to learn more</div>
+		<div id="guide-icon"><img class="img-scaled" src="static/icons/arrow_down.svg" /></div>
+	</div>
+	<script>
+		// EDIT CONTENT BELOW
+		const state = {
+			semester: "Fall 2021", // used in content strings below
+			mode: "DURING_SEMESTER", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
+			url: "https://wdd.io/go/apply" // GOOGLE FORM URL FOR APPLICATION
+		};
+		const ctaContent = {
+			"DECAL_APPS_OPEN": {
+				"bannerText": `Applications for ${state.semester} are now open! See below for more info.`,
+				"button":
+					`<a id="cover-action-live" class="cover-action-item" target="_blank" href="${state.url}">Apply for ${state.semester}</a>`,
+				"bottomCta":
+					`<div class="apply-action-item" id="apply-submit">
+						<div class="apply-action-item-caption" id="apply-submit-caption">Getting pumped?</div>
+						<a href="${state.url}" target="_blank"><div class="apply-action-item-button" id="apply-submit-button">Apply for ${state.semester}</div></a>
+					</div>`
+			},
+			"DURING_SEMESTER": {
+				"bannerText": `Applications are now closed for ${state.semester}. No late applications are being accepted at this time (not even if you email us!), but check back at the end of the semester!`,
+				"button":
+					`<a id="cover-action-live" class="cover-action-item" href="#">Log in to WDD Portal</a>`,
+				"bottomCta":
+					`<div class="apply-action-item" id="apply-contact">
+						<div class="apply-action-item-caption" id="apply-contact-caption">Have questions?</div>
+						<a href="mailto:ask@wdd.io"><div class="apply-action-item-button" id="apply-contact-button">Contact Us</div></a>
+					</div>`
+			},
+			"TA_APPS_OPEN": {
+				"bannerText": `Application and enrollment info for ${state.semester} will be made available near the beginning of the semester! Please check back then.`,
+				"button":
+					` <a id="cover-action-live" class="cover-action-item" target="_blank" href="https://wdd.io/go/ta">Apply to be a TA</a>`,
+				"bottomCta":
+					`<div class="apply-action-item" id="apply-submit">
+						<div class="apply-action-item-caption" id="apply-submit-caption">Getting pumped?</div>
+						<a href="https://wdd.io/go/ta" target="_blank"><div class="apply-action-item-button" id="apply-submit-button" style="margin-top: 5px;">Apply to be a TA</div></a>
+					</div>`
+			}
+		};
+		const instructorData = [
+			{
+				name: "Julia Liu",
+				imgSrc: "static/images/juliasliu.jpg",
+				linkedinUrl: "https://linkedin.com/in/juliasliu/",
+				email: "juliasliu@berkeley.edu",
+				websiteUrl:  "https://juliasliu.com",
+				blurb: "Hi, I’m Julia (S) Liu and I am one of the programming instructors for WDD this semester! I’m currently a third year studying CS and Business, and web design & development has been a long-time passion of mine. Super excited to meet you all!"
+			},
+			{
+				name: "Lily Sai",
+				imgSrc: "static/images/lily.jpg",
+				linkedinUrl: "https://www.linkedin.com/in/lilysai/",
+				email: "lilysai@berkeley.edu",
+				websiteUrl: "https://lilys2001.github.io/",
+				blurb: "Hi, I’m Lily! I’m a senior studying computer science. This will be my fifth semester with WDD and my first time as an instructor. I love web development and am excited to meet everyone!"
+			},
+			{
+				name: "Jay Feng",
+				imgSrc: "static/images/jay.png",
+				linkedinUrl: "https://www.linkedin.com/in/jayccfeng/",
+				email: "jayfeng10@berkeley.edu",
+				websiteUrl: "",
+				blurb: "Hi! I'm Jay and I'm a third-year studying computer science and data science. I'm excited for another fun semester and I look forward to seeing all your amazing projects!"
+			},
+		];
+		const taData = [
+			{
+				name: "Julia Liu",
+				imgSrc: "static/images/julia_liu.jpg",
+				url: "mailto:julia_liu@berkeley.edu"
+			},
+			{
+				name: "Steven Huang",
+				imgSrc: "static/images/steven_huang-2.jpg",
+				url: "https://stevenhuang010.github.io"
+			},
+			{
+				name: "Tiffany Wang",
+				imgSrc: "static/images/tiffany.png",
+				url: "https://tiffanywang.me/"
+			},
+			{
+				name: "Laura Pei",
+				imgSrc: "static/images/laura.png",
+				url: "https://lauraspberry.github.io/"
+			},
+			{
+				name: "Isabel Li",
+				imgSrc: "static/images/isabel.JPG",
+				url: "http://isabel.li"
+			},
+			{
+				name: "Jirachaya Kiriruangchai",
+				imgSrc: "static/images/jirachaya.JPG",
+				url: "http://jirachaya-kiri.github.io"
+			},
+			{
+				name: "Ethan Chen",
+				imgSrc: "static/images/ethan.jpg",
+				url: "mailto:ethanxychen@berkeley.edu"
+			},
+		];
+		const faqData = [
+			// {
+			// 	"question": "If I cannot attend part of the lecture or lab, can I still take this class?",
+			// 	"answer": "No, we would not recommend applying. Points lost from absences and missed material will add up."
+			// },
+			{
+				"question": "How is this class graded?",
+				"answer":
+					`<div>Here's our grading breakdown:</div>
+					<div><span style="color: #de6868; margin-right: 12px;">Homework</span><strong>40%</strong></div>
+					<div><span style="color: #78c272; margin-right: 12px;">Group Project</span><strong>28%</strong></div>
+					<div><span style="color: #6392c0; margin-right: 12px;">Final Project</span><strong>32%</strong></div>
+					<div>You will get a P if you have 70% or higher final grade.</div>`
+			},
+			// {
+			// 	"question": "How many absences do I get?",
+			// 	"answer": "You're allowed a total of 3 absences for the entire course. Every absence over the limit of 3 will result in a loss of 5 points, which is 5% of your course grade."
+			// },
+			{
+				"question": "Can I audit the class?",
+				"answer": "Yes, you are welcome to audit the class. Note that auditors will not be apart of live lectures, but will still have access to all recorded lectures on our Youtube (https://www.youtube.com/user/wddlive)."
+			},
+			{
+				"question": "I'm thinking about taking WDD next semester. When will all of the CCN / enrollment info be available?",
+				"answer": "Not all enrollment information is available before semester starts due to the timeline by which DeCals are organized on campus. Enrollment applications open toward the beginning of the semester and CCNs are distributed to accepted students at the first class."
+			},
+			{
+				"question": "If I'm a graduate student, can I take this class?",
+				"answer": "Yes!"
+			},
+			{
+				"question": "When and where are classes?",
+				"answer": "Fall 2020 classes will be every Tuesday&nbsp;7:00&ndash;8:30pm and every Thursday&nbsp;7:00&ndash;8:00pm online (Zoom)."
+			},
+			{
+				"question": "Can I take this class for a letter grade?",
+				"answer": "Because this class is a DeCal, you can only take this class on a P/NP basis, where you will get a P if you get 70% or higher."
+			},
+			{
+				"question": "What's your application criteria?",
+				"answer": "We mainly decide based on your responses to the Short Answer questions of the application, but we do give slight preference for previous applicants and seniors."
+			},
+			{
+				"question": "Do I need previous programming experience?",
+				"answer": "Nope! We teach you all the basics of everything you will need in this class."
+			}
+		];
+		// render content!
+		const faqTemplate = (faq) =>
+			`<div class="faq-item">
+				<div class="faq-item-header">
+					<div class="faq-item-header-dot"></div>
+					<div class="faq-item-header-dot"></div>
+					<div class="faq-item-header-dot"></div>
+					<div class="clear"></div>
+				</div>
+				<div class="faq-item-content">
+					<div class="faq-item-question">${faq.question}</div>
+					<div class="faq-item-answer">${faq.answer}</div>
+				</div>
+			</div>`;
+		const instructorTemplate = (instructor, index) =>
+			`<div class="window-instructor-item">
+				${index % 2 !== 0 ? `<div class="window-instructor-popover">${instructor.blurb}</div>` : ""}
+				<div class="window-instructor-info">
+					<div class="window-instructor-thumbnail"><img class="img-scaled-wh" src="${instructor.imgSrc}" /></div>
+					<div class="clear"></div>
+					<div class="window-instructor-name">${instructor.name}</div>
+					<div class="window-instructor-link">
+						${instructor.linkedinUrl ? `<a href="${instructor.linkedinUrl}" target="_blank"><div class="window-instructor-link-item"><img class="img-scaled" src="static/icons/linkedin.png" /></div></a>` : ""}
+						<a href="mailto:${instructor.email}"><div class="window-instructor-link-item"><img class="img-scaled" src="static/icons/mail_color.svg" /></div></a>
+						${instructor.websiteUrl ? `<a href="${instructor.websiteUrl}" target="_blank"><div class="window-instructor-link-item"><img class="img-scaled" src="static/icons/website_color.svg" /></div></a>` : ""}
+						<div class="clear"></div>
+					</div>
+				</div>
+				${index % 2 === 0 ? `<div class="window-instructor-popover">${instructor.blurb}</div>` : ""}
+				<div class="clear"></div>
+			</div>`;
+		const taTemplate = (ta) =>
+			`<div class="window-instructor-ta-item">
+				<div class="window-instructor-ta-thumbnail"><img class="img-scaled-wh" src="${ta.imgSrc}" /></div>
+				<div class="window-instructor-ta-info">
+					<div class="window-instructor-ta-name">${ta.name}</div>
+				</div>
+				<a href="${ta.url}" target="_blank"><div class="window-instructor-ta-link"><img class="img-scaled" src="static/icons/website.svg" /></div></a>
+				<div class="clear"></div>
+			</div>`;
+		document.getElementById('banner-text').innerHTML = ctaContent[state.mode].bannerText;
+		document.getElementById('cover-action-button').innerHTML = ctaContent[state.mode].button;
+		document.getElementById('apply-action').innerHTML = ctaContent[state.mode].bottomCta;
+		document.getElementById('faq-content').innerHTML = faqData.map(faqTemplate).join("");
+		document.getElementById('window-instructor-content').innerHTML = instructorData.map(instructorTemplate).join("");
+		document.getElementById('window-instructor-ta-content').innerHTML = taData.map(taTemplate).join("");
+	</script>
+</body>
+</html>

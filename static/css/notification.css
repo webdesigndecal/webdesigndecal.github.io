@@ -1,0 +1,62 @@
+/* NOTIFICATION */
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.notification {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: -webkit-transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: -moz-transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transform: translateY(100%);
+    display: none;
+}
+.notification-active {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+}
+.notification-hidden {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+}
+.notification-box {
+    position: absolute;
+    width: 360px;
+    border-radius: 3px;
+    left: calc(50% - 200px);
+    padding: 20px;
+    top: 50%;
+    margin-top: -74px;
+}
+#notification-success .notification-box {
+    background: #78c272;
+}
+#notification-failure .notification-box {
+    background: #de6868;
+}
+.notification-icon {
+    width: 48px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+.notification-caption {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+}

@@ -1,0 +1,147 @@
+#roster-header {
+    margin: 20px auto;
+    position: relative;
+    font-size: 36px;
+    color: #4a4a4a;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.roster-item {
+    width: 206px;
+    border-radius: 2px;
+    margin-right: 21px;
+    margin-bottom: 42px;
+    float: left;
+    position: relative;
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+.roster-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.roster-thumbnail-container {
+    width: 206px;
+    height: 206px;
+    overflow: hidden;
+    position: relative;
+}
+
+.roster-thumbnail {
+    width: 100%;
+    height: 100%;
+}
+
+.roster-overlay {
+    background: rgba(0, 0, 0, 0.24);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: linear 0.4s;
+}
+
+.roster-stamp {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 48px;
+    opacity: 0;
+    -webkit-filter: blur(10px);
+    transition: linear 0.4s;
+    -webkit-transform: rotate(-12deg);
+}
+
+.roster-item:hover .roster-overlay {
+    opacity: 1;
+}
+
+.roster-item:hover .roster-stamp {
+    -webkit-filter: blur(0px);
+    opacity: 0.72;
+}
+
+.roster-content {
+    margin-top: 12px;
+    font-family: 'Lato';
+}
+
+.roster-content-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    /*line-height: 16px;*/
+}
+
+.roster-content-email {
+    font-size: 12px;
+    opacity: 0.6;
+    /*line-height: 12px;*/
+}
+
+.roster-item::before {
+    position: absolute;
+    width: 54px;
+    height: 18px;
+    content: '';
+    background: rgba(74, 74, 74, 0.06);
+    top: 2px;
+    left: -18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.roster-item::after {
+    position: absolute; width: 54px; height: 18px; background: rgba(74, 74, 74, 0.06);
+    bottom: 2px;
+    right: -18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.roster-info {
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    color: white;
+    opacity: 0;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
+    transition: linear 0.4s;
+}
+
+.roster-info-item:first-child {
+    margin-right: 12px;
+    padding-right: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.roster-info-header {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.roster-info-grade {
+    font-size: 18px;
+}
+
+.roster-info-item {
+    float: left;
+}
+
+.roster-item:hover .roster-info {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+}

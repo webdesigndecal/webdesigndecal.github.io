@@ -1,0 +1,233 @@
+
+/* TODO: Extend base with the following styles */
+
+.tab-header {
+    width: 720px;
+    margin: 0 auto;
+    padding: 70px 0 20px;
+    position: relative;
+}
+
+.tab-header .title {
+    font-size: 36px;
+    color: #4a4a4a;
+    line-height: 48px;
+    font-weight: 700;
+    float: left;
+}
+
+.tab-header .tab-nav {
+    float: left;
+    margin: 17px 0 0 24px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tab-header .tab-nav-item {
+    font-size: 13px;
+    line-height: 24px;
+    transition: linear 0.2s;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.6;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.tab-header .tab-nav-item:hover {
+    opacity: 0.9;
+}
+
+.tab-header .tab-nav-item-active {
+    color: #78c272;
+    opacity: 1;
+}
+
+.tab-content {
+    width: 720px;
+    margin: 0 auto;
+}
+
+.tab-content .row {
+    margin: 0 auto 20px;
+    background: white;
+    position: relative;
+    color: #4a4a4a;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #edeae5;
+}
+
+.row-content {
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.row-caption {
+    float: left;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.row-caption-button {
+    float: right;
+    font-size: 11px;
+    line-height: 21px;
+    margin-left: 10px;
+    padding: 0 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    color: white;
+    transition: linear 0.2s;
+    cursor: pointer;
+    font-weight: 700;
+    -webkit-user-select: none;
+}
+
+.row-description {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.75;
+    transition: linear 0.2s;
+}
+
+.row-description[contenteditable="true"] {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 15px;
+    min-height: 1.5em; /* Matching the ``line-height`` */
+    background: #78c272;
+    color: white;
+    border-radius: 3px;
+}
+
+.row-description[contenteditable="true"]:empty::before {
+    content: attr(data-placeholder);
+    display: block;
+    opacity: 0.5;
+}
+
+.row-description[contenteditable="true"]::after {
+    content: 'Press ENTER to save';
+    position: absolute;
+    right: 2px;
+    bottom: -20px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 11px;
+    color: #4a4a4a;
+    opacity: 0.5;
+    font-weight: 700;
+}
+
+.row-button {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 3px;
+    transition: linear 0.2s;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+}
+
+/* base.css */
+
+.queue {
+    display: flex; /* Flex model used here for the special ``order`` property on children items */
+    flex-direction: column;
+}
+
+.queue > .row {
+    width: 100%;
+    flex: none;
+}
+
+.row.if-empty {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.30);
+}
+
+.queue + .row.if-empty {
+    display: none;
+}
+
+.queue:empty + .row.if-empty {
+    /* The ``:empty`` pseudo-class isn't super reliable just yet (as of Jan 2018); the browser may miss the state change but it's probably ok to miss displaying the empty text */
+    display: block;
+}
+
+.row-info .row-description {
+    font-size: 18px;
+}
+
+.row-question-answer-divider {
+    border: none;
+    background: #cfd9db;
+    width: 50%;
+    height: 1px;
+    margin-left: 0;
+}
+
+.row-remove {
+    background: #de6868;
+}
+
+.row-resolve,
+.row-unresolve {
+    background: #78c272;
+}
+
+.row-section-upvotes {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.row-upvote  {
+    flex: none;
+    margin: 0 10px 0 0;
+}
+
+.row-votes {
+    display: flex;
+}
+
+.vote {
+    flex: none;
+    max-height: 50px;
+    text-align: center;
+}
+
+.vote .pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    margin-bottom: -10px;
+}
+
+.vote .count {
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0 5px;
+    background: #ffffff;
+    border: solid 1px #cfd9db;
+    border-radius: 8px;
+}
+
+.tab-last-updated {
+    font-size: 11px;
+    color: #4a4a4a;
+    opacity: 0.5;
+    font-weight: 700;
+    text-align: center;
+}
