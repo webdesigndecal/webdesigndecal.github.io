@@ -487,9 +487,9 @@
 	<script>
 		// EDIT CONTENT BELOW
 		const state = {
-			semester: "Fall 2021", // used in content strings below
-			mode: "DURING_SEMESTER", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
-			url: "https://wdd.io/go/apply" // GOOGLE FORM URL FOR APPLICATION
+			semester: "Fall 2022", // used in content strings below
+			mode: "DECAL_APPS_OPEN", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
+			url: "https://forms.gle/YDeffzTycgmGtvE26" // GOOGLE FORM URL FOR APPLICATION
 		};
 		const ctaContent = {
 			"DECAL_APPS_OPEN": {
@@ -504,8 +504,6 @@
 			},
 			"DURING_SEMESTER": {
 				"bannerText": `Applications are now closed for ${state.semester}. No late applications are being accepted at this time (not even if you email us!), but check back at the end of the semester!`,
-				"button":
-					`<a id="cover-action-live" class="cover-action-item" href="#">Log in to WDD Portal</a>`,
 				"bottomCta":
 					`<div class="apply-action-item" id="apply-contact">
 						<div class="apply-action-item-caption" id="apply-contact-caption">Have questions?</div>
@@ -525,65 +523,36 @@
 		};
 		const instructorData = [
 			{
-				name: "Julia Liu",
-				imgSrc: "static/images/juliasliu.jpg",
-				linkedinUrl: "https://linkedin.com/in/juliasliu/",
-				email: "juliasliu@berkeley.edu",
-				websiteUrl:  "https://juliasliu.com",
-				blurb: "Hi, I’m Julia (S) Liu and I am one of the programming instructors for WDD this semester! I’m currently a third year studying CS and Business, and web design & development has been a long-time passion of mine. Super excited to meet you all!"
+				name: "Steven Huang",
+				imgSrc: "static/images/steven_huang.jpg",
+				linkedinUrl: "linkedin.com/in/stevenshuang/",
+				email: "huangsteven@berkeley.edu",
+				websiteUrl:  "https://stevenhuang010.github.io/",
+				blurb: "Hi, I’m Steven! I'm one of the programming instructors for WDD this semester. I'm a junior studying computer science and this will be my third semester with WDD. Excited to meet all of you!"
 			},
 			{
-				name: "Lily Sai",
+				name: "Kelly Hu",
 				imgSrc: "static/images/lily.jpg",
-				linkedinUrl: "https://www.linkedin.com/in/lilysai/",
-				email: "lilysai@berkeley.edu",
-				websiteUrl: "https://lilys2001.github.io/",
+				linkedinUrl: "https://www.linkedin.com/in/hukellyy/",
+				email: "hukellyy@berkeley.edu",
 				blurb: "Hi, I’m Lily! I’m a senior studying computer science. This will be my fifth semester with WDD and my first time as an instructor. I love web development and am excited to meet everyone!"
-			},
-			{
-				name: "Jay Feng",
-				imgSrc: "static/images/jay.png",
-				linkedinUrl: "https://www.linkedin.com/in/jayccfeng/",
-				email: "jayfeng10@berkeley.edu",
-				websiteUrl: "",
-				blurb: "Hi! I'm Jay and I'm a third-year studying computer science and data science. I'm excited for another fun semester and I look forward to seeing all your amazing projects!"
 			},
 		];
 		const taData = [
 			{
-				name: "Julia Liu",
-				imgSrc: "static/images/julia_liu.jpg",
-				url: "mailto:julia_liu@berkeley.edu"
+				name: "Bryan Chu",
+				imgSrc: "static/images/bryan.jpg",
+				url: "https://www.linkedin.com/in/bryan-chu33/"
 			},
 			{
-				name: "Steven Huang",
-				imgSrc: "static/images/steven_huang-2.jpg",
-				url: "https://stevenhuang010.github.io"
+				name: "Kelly Tran",
+				imgSrc: "static/images/kelly.jpg",
+				url: "https://kxllytrxn.github.io/"
 			},
 			{
-				name: "Tiffany Wang",
-				imgSrc: "static/images/tiffany.png",
-				url: "https://tiffanywang.me/"
-			},
-			{
-				name: "Laura Pei",
-				imgSrc: "static/images/laura.png",
-				url: "https://lauraspberry.github.io/"
-			},
-			{
-				name: "Isabel Li",
-				imgSrc: "static/images/isabel.JPG",
-				url: "http://isabel.li"
-			},
-			{
-				name: "Jirachaya Kiriruangchai",
-				imgSrc: "static/images/jirachaya.JPG",
-				url: "http://jirachaya-kiri.github.io"
-			},
-			{
-				name: "Ethan Chen",
-				imgSrc: "static/images/ethan.jpg",
-				url: "mailto:ethanxychen@berkeley.edu"
+				name: "Evan Lim",
+				imgSrc: "static/images/evan.jpg",
+				url: "https://www.linkedin.com/in/evan-lim-611445227/"
 			},
 		];
 		const faqData = [
@@ -618,7 +587,7 @@
 			},
 			{
 				"question": "When and where are classes?",
-				"answer": "Fall 2020 classes will be every Tuesday&nbsp;7:00&ndash;8:30pm and every Thursday&nbsp;7:00&ndash;8:00pm online (Zoom)."
+				"answer": "Fall 2022 classes will be every Monday&nbsp;7:00&ndash;8:00pm (Zoom) and every Thursday&nbsp;8:00&ndash;9:30pm (Soda 306)."
 			},
 			{
 				"question": "Can I take this class for a letter grade?",
