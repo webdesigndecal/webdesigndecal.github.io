@@ -52,6 +52,14 @@
 						</div>
 					</div>
 				</div>
+				<div resize="popUp(window.innerWidth)" class="popup" id="mobile-popup">
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>Some text in the Modal..</p>
+					</div>
+				</div>
+
 				<div id="cover-footer">
 					<div class="slide-overlay"></div>
 				</div>
@@ -519,10 +527,18 @@
 		<div id="guide-icon"><img class="img-scaled" src="static/icons/arrow_down.svg" /></div>
 	</div>
 	<script>
-		// EDIT CONTENT BELOW
+		// EDIT CONTENT BELOW		
+		function popUp(window) {
+			if (width > 600) {
+			document.getElementByClass("popup").style.display = "none";
+			} else if (width < 600) {
+			document.getElementByClass('popup').style.display = "block";
+			}
+		};
+	
 		const state = {
 			semester: "Spring 2023", // used in content strings below
-			mode: "DECAL_APPS_OPEN", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
+			mode: "DURING_SEMESTER", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
 			url: "https://forms.gle/rdWA91yHp6fMBUvS8" // GOOGLE FORM URL FOR APPLICATION
 		};
 		const ctaContent = {
@@ -541,7 +557,7 @@
 				"bottomCta":
 					`<div class="apply-action-item" id="apply-contact">
 						<div class="apply-action-item-caption" id="apply-contact-caption">Have questions?</div>
-						<a href="mailto:ask@wdd.io"><div class="apply-action-item-button" id="apply-contact-button">Contact Us</div></a>
+						<a href="mailto:berkeleywdd@gmail.com"><div class="apply-action-item-button" id="apply-contact-button">Contact Us</div></a>
 					</div>`
 			},
 			"TA_APPS_OPEN": {
