@@ -1,3 +1,3 @@
-THIS REPOSITORY WAS FORKED FROM THE MAIN PORTAL TO MAINTAIN THE STATIC SITE.
+# The landing page for the Web Design Decal.
 
-FOR THE ACTUAL PORTAL, REFER TP THE PORTAL REPO IN THE GITHUB WEBDESGINDECAL ORG.
+## Visit the [website](https://webdesigndecal.github.io)!
