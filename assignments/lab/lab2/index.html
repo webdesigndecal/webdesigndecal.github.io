@@ -1,0 +1,305 @@
+<!-- Explorer starts here -->
+<!-- Explorer ends here -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Hands-on 2</title>
+  <link rel="stylesheet" type="text/css" href="-mark2html-resources\assets\styles\atom-one-light.css" />
+  <link rel="stylesheet" type="text/css" href="-mark2html-resources\assets\styles\style.css" />
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="header-caption">
+        <img id="header-caption-logo" src="-mark2html-resources\assets\images\logo.png" />
+        <div id="header-caption-name">Web Design DeCal</div>
+      </div>
+      <div id="header-content">
+        <div id="header-title">Hands-on 2</div>
+        <div id="header-due">September 26</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block block-highlight">
+        <p>
+          This lab will get us more familiar with CSS, and how we use CSS with
+          HTML to make our webpages look nicer.
+        </p>
+        <p>
+          Throughout the lab, it might help to refer back to
+          <a target="_blank"
+            href="https://docs.google.com/presentation/d/1shum04ioB3Eg0t-UZLbli6YfukSiircR_svuQyqtDB4/edit?usp=sharing">this
+            week's slides</a>
+          if you'd like to revisit a concept from lecture.
+        </p>
+      </div>
+
+      <!-- Body starts here -->
+      <h2 id="part-1-link-css-file">Assignment</h2>
+      <p>
+        We have provided you with the backbone for this lab. You can download
+        the assignment file here:
+      </p>
+      <a class="download_button" href="assets/lab2-starter.zip">
+        <div class="download">Download File</div>
+      </a>
+      <p>
+        Last week, we used HTML to create a skeleton of our Airbnb-esque page.
+        Today we'll build on that page and add CSS. If you open the provided
+        starter <code>index.html</code> in your browser, it should look like
+        this:
+      </p>
+      <p><img src="assets\screenshot.png" alt="Our HTML skeleton." /></p>
+      <p>
+        In this lab, we're going to add CSS so that the page looks like this:
+      </p>
+      <p><img src="assets\screenshot2.png" alt="Final product." /></p>
+      <h2 id="part-1-link-css-file">Part 1: Link CSS File</h2>
+      <p>
+        Open <code>index.html</code> in the <code>starter</code> folder of the
+        zip file you downloaded for this lab.
+      </p>
+      <p>
+        As usual, let's link the CSS file first. Add this inside your head
+        tags:
+      </p>
+      <pre><code class="html language-html">&lt;link <span class="hljs-attribute">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-string">"css/style.css"</span>&gt;</code></pre>
+      <h2 id="part-2-change-the-font">Part 2: Change the font</h2>
+      <p>
+        We'll discuss fonts and typography in lecture later, but let's pick a
+        font for our page. We like
+        <a href="https://fonts.google.com/specimen/Karla">Karla</a>. However,
+        not everyone's computer has Karla installed, so we must
+        <em>load the font file</em> so that we can use the font on our page!
+        Fortunately, Google Fonts provides the font files and CSS necessary to
+        use these fonts. Add this line <strong>before our css file</strong> in
+        <code>head</code>:
+      </p>
+      <pre><code class="html language-html">&lt;link <span class="hljs-attribute">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Karla&amp;display=swap"</span> <span class="hljs-attribute">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</code></pre>
+      <p>
+        Now we can use Karla. In our <code>style.css</code>, let's change the
+        font of the whole page. Let's also change the color to a dark grey
+        instead of pure black.
+      </p>
+      <pre><code class="css language-css"><span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-family</span>: Karla, sans-serif;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#484848</span>;
+}</code></pre>
+      <p>
+        If Karla is for some reason unavailable, the browser will use the
+        computer's default sans-serif font, such as Arial or Helvetica.
+      </p>
+      <p>
+        Refresh the page in your browser and you should see the font changes.
+      </p>
+      <h2 id="part-3-header-and-navbar">Part 3: Header and Navbar</h2>
+      <p>
+        Let's first remove the default bullet point list styles that the
+        browser adds to <code>&lt;ul&gt;</code>. You don't have to know these,
+        we google these things all the time! Notice that the selector is
+        <code>nav ul</code>. This means, apply css to
+        <code>&lt;ul&gt;</code> inside <code>&lt;nav&gt;</code>, in case there
+        are other places on the page that we'd actually want a bullet point
+        list.
+      </p>
+      <pre><code class="css language-css"><span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">list-style-type</span>: none;
+    <span class="hljs-attribute">padding-inline-start</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">margin-block-start</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">0</span>;
+}</code></pre>
+      <p>
+        Also add a background color, <code>#FF5A5F</code>, to
+        <code>header</code>. Don't forget that
+        <code>background-color</code> is used to change the color of a
+        background while <code>color</code> is used to change text color! We
+        want the header to span the full width of the page, which the
+        <code>&lt;header&gt;</code> element does by default. But notice how
+        there's a space on the edge of the page. Let's get rid of that by
+        adding <code>margin: 0;</code> and <code>padding: 0;</code> to
+        <code>body</code>. Now your header should look like this:
+      </p>
+      <p><img src="assets\header.png" alt="header." /></p>
+      <p>
+        We should explicitly set a height for our header, otherwise it'll be
+        however tall the logo image is. Add <code>height: 80px;</code> to
+        <code>header</code>.
+      </p>
+      <p><img src="assets\screenshot3.png" alt="Our HTML skeleton." /></p>
+      <p>
+        Since we didn't change the logo height, you'll notice that the logo
+        bleeds out of the header. Let's fix that and make the logo image the
+        same height. Since this is a special, one-time thing, we'll use an
+        <em>id</em>. Add an id, <code>logo</code>, to the logo
+        <code>img</code> in HTML:
+      </p>
+      <pre><code class="html language-html">&lt;img <span class="hljs-attribute">src</span>=<span class="hljs-string">"img/logo.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attribute">id</span>=<span class="hljs-string">"logo"</span>/&gt;</code></pre>
+      <p>Then in css, we can specify its height:</p>
+      <pre><code class="css language-css"><span class="hljs-selector-id">#logo</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+}</code></pre>
+      <p>
+        In css, if you only specify width, or only specify height for an
+        image, then the other dimension will scale proportionally, which is
+        nice!
+      </p>
+      <p>
+        We want the links aligned horizontally to the right. The following css
+        will applied to the <code>&lt;nav&gt;</code> element (which contains
+        all of our links in html), and each list item (<code>li</code>). You
+        don't have to understand this right now and we'll talk about this in
+        lecture next week! Basically, these HTML elements by default span the
+        whole width of the page and stack on top of each other, and instead we
+        want them to only take up as much space as it needs, and align next to
+        each other instead.
+      </p>
+      <pre><code class="css language-css"><span class="hljs-selector-tag">nav</span> {
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">float</span>: right;
+}
+<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">display</span>: inline-block;
+}</code></pre>
+      <p>
+        The links should now be in the top right corner of the page. Now let's
+        make them look nice, as opposed to the default blue. Do the following
+        for <code>nav a</code> (this selector gets all the link elements
+        inside <code>&lt;nav&gt;</code>), as well as
+        <code>nav a:visited</code> (remember what this means?):
+      </p>
+      <ul>
+        <li>Change the font color to white</li>
+        <li>Change the font size to <code>18px</code></li>
+        <li>Remove the underline</li>
+        <li>
+          Change the pointer - usually we can tell something on a page is
+          clickable when it turns into the index-finger-pointing cursor. Do
+          this with <code>cursor: pointer;</code>.
+        </li>
+        <li>
+          Add a new block of css so that the link is <u>underlined</u> when
+          you hover over it
+        </li>
+      </ul>
+      <p>
+        But the links are still squished together in the top-right corner!
+        Let's space them out a bit:<br />
+        Add <code>margin-left: 40px;</code> to the block for
+        <code>nav li</code>.
+      </p>
+      <p>
+        Now here's a trick to easily vertically-center the links in the
+        navbar: we'll set the line-height of the <code>&lt;li&gt;</code>
+        <em>equal to its height</em>. So add
+        <code>line-height: 80px;</code> to <code>nav li</code>. This works
+        because line-height specifies how tall one line of text should be, and
+        centers the text in that space!
+      </p>
+      <h2 id="part-4-formatting-the-sections">
+        Part 4: Formatting the sections
+      </h2>
+      <p>
+        We want our content to be in an invisible box centered on the page. As
+        you can see, right now everything defaults to spanning the whole width
+        of your browser. Our HTML structure looks like this:
+      </p>
+      <p><img src="assets\html1.png" alt="html structure" /></p>
+      <p>Instead, we want our html structure to look like this:</p>
+      <p><img src="assets\html2.png" alt="better html structure." /></p>
+      <p>
+        To do this, we're going to add a <code>div</code> to contain all of
+        our content. In <code>index.html</code>, create a <code>div</code>.
+        Give it a class, <code>content</code>, since we'll be using this in a
+        few places: in <code>header</code> and <code>body</code>. In
+        <code>header</code>, have this content div "wrap" all the tags inside
+        (the logo and nav). Make another to "wrap" all the content in
+        <code>body</code>. So, your html should be like this:
+      </p>
+      <pre><code class="html language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- logo and nav --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- h1 and three sections --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
+      <p>
+        For css, setting <code>margin: auto;</code> will automatically center
+        this div.
+      </p>
+      <pre><code class="css language-css"><span class="hljs-selector-class">.content</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">900px</span>;
+    <span class="hljs-attribute">margin</span>: auto;
+}</code></pre>
+      <p>
+        Let's add spacing and a border to the three sections and make the
+        images smaller. Below a skeleton for the css.
+        <strong>Fill in the blanks</strong> and play with the spacing until
+        you achieve something you like:
+      </p>
+      <pre><code class="css language-css"><span class="hljs-selector-tag">section</span> {
+    <span class="hljs-attribute">padding</span>: __px;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid #cccccc;  
+    <span class="hljs-attribute">margin-bottom</span>: __px;
+}
+
+<span class="hljs-selector-tag">section</span> <span class="hljs-selector-tag">img</span> {
+    <span class="hljs-attribute">width</span>: __px;
+}</code></pre>
+      <h2 id="part-5-fine-tuning">Part 5: Fine tuning</h2>
+      <p>
+        Take a look at your page. Is there anywhere that could use more
+        spacing or anything? We changed some font sizes and added more
+        breathing room for the <code>h1</code>, but again you should mess
+        around with the numbers until you it "feels right." The best way to
+        learn design is by practicing! Here's a css starter - fill in the
+        blanks:
+      </p>
+      <pre><code><span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">font-size</span>: __px;
+    <span class="hljs-attribute">padding-top</span>: __px;
+    <span class="hljs-attribute">padding-bottom</span>: __px;
+}
+
+<span class="hljs-selector-tag">h2</span> {
+    <span class="hljs-attribute">font-size</span>: __px;
+}
+
+<span class="hljs-selector-tag">section</span> <span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">font-size</span>: __px;
+}</code></pre>
+      <p>And now you're done! Congrats on finishing the lab!</p>
+      <!-- Body ends here -->
+    </div>
+    <div class="section">
+      <h2>Submission</h2>
+      <div class="block block-highlight">
+
+        <!-- Submission info starts here -->
+        <div id="submission-content">
+          <p>Submit your files to your GitHub Submission Repository by copying all the files inside the
+            "starter" folder into the lab2 folder of your submission repository (replace the index.html
+            originally in it). In your terminal, from your GitHub Submission Repository, run the following
+            Git commands:</p>
+          <ul>
+            <li>git add -A</li>
+            <li>git commit -m 'finished lab2'</li>
+            <li>git push</li>
+          </ul>
+          <p>This assignment is due Tuesday, September 26th at 7:00PM PDT.</p>
+        </div>
+        <!-- Submission info ends here -->
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!-- @webdesigndecal/mark2html@0.0.11 -->

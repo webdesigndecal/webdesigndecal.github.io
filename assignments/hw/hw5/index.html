@@ -1,0 +1,145 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>WDD Homework 5</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<style type="text/css"></style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png"></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Homework 5</div>
+				<!-- DUE DATE -->
+				<div id="header-due">October 12th</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info" style="padding: 0px 30px;">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">This might look familiar. . . </div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Text Editor and Google Chrome Web Inspector</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">There was a lot of information to take in. There are so many ways to lay out
+						our items, but the most modern way is the easiest and most. . . flexible! The best way to get
+						the hang of laying out a page is to do it. Let's make a cool, modern dashboard using our cool,
+						modern tool -- flexbox!</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header" style="padding: 0 30px">Assignment</div>
+				<!-- CONTENT -->
+
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+				<!-- Can use CODE Tag for code snippets or references -->
+
+				<p class="caption" style="padding: 0 30px">This assignment will include a combination of new Flexbox
+					concepts and a review of common challenges from previous weeks. This means that you'll be editing
+					both the HTML and CSS files in the starter folder.</p>
+				<a href="hw5-starter.zip">
+					<div class="download">Download Assignment</div>
+				</a>
+
+				<ul style="padding: 0 30px">
+					<h1>What we'll be doing</h1>
+					<p>This time, the end product will be shown first, since it's much easier to use flexbox when we
+						have a visual of what we're going for. Below is the dashboard we'll be putting together in this
+						assignment.</p>
+					<img src="assets/images/dashboard.png" id="complete">
+					<p>Hm. Looks familiar.</p>
+					<p class="caption">Hint: We'll be doing minimal edits to the HTML. Your main task deals with
+						<span>positioning</span> everything you see with flexbox. Most of the styling has been done, but
+						you can always tweak whatever you want as long as it doesn't break things.
+					</p>
+
+					<li>
+						<h1>Part 1: Reviewing The Basics!</h1>
+						<p>First thing's first, let's link the CSS file using the same steps as previous assignments.
+							Then, find the "Lato" font on <a
+								href="https://developers.google.com/fonts/docs/getting_started" target="_blank">Google
+								Fonts</a>. Link that font
+							to the HTML and be sure to include weights 300 and 400.</p>
+						<p>Once that's done, you'll find a completely broken page:</p>
+						<img src="assets/images/part1-1.png">
+						<p>There are 6 total image that need fixing in the sidebar and dashboard header, denoted by an
+							empty <code>src</code> attribute. Link each image (located in the img folder) using the
+							correct file path.</p>
+						<p class="caption">Hint: All fixes are denoted by a "FIXME" comment in the file. The filenames
+							should correspond to the class names.</p>
+						<p>Once you've finished, the page should look something like this:</p>
+						<img src="assets/images/part1-2.png">
+					</li>
+					<li>
+						<h1>Part 2: Styling</h1>
+						<p>Let's move onto the CSS!</p>
+						<p>Now that we've finished up the structure in HTML, everything else is in the CSS file! You'll
+							find a <code>FIXME</code> comment above each section of styling that requires your
+							attention.</p>
+						<p>To simplify things, you'll only be making CSS edits in the "style.css" file. While you won't
+							need to edit <code>main.css</code>, it may be hepful to read through its entirety before
+							starting. This file does contain styles that we have not taught yet, so you are only
+							responsible for those that we have covered in class.</p>
+						<p>As you fill out <code>style.css</code>, refer to the image of the <a
+								href="#complete">completed dashboard</a> above as a guide. You'll need to use a mix of
+							CSS from past weeks, as well as the new flexbox styles, as indicated in the FIXME comments.
+						</p>
+						<p>You might notice that the naming convention is a bit unfamiliar. No worries! They still
+							function the same as before. If you'd like to learn more about the Block-Element-Modiifer naming
+							conventions used, take a look at this <a href="http://getbem.com/">website</a>.</p>
+						<p class="caption">Hint: Be sure to link your CSS file if you have not already. Also, remember
+							the main flex properties: <code>display: flex</code>, <code>flex-direction</code>,
+							<code>justify-content</code>, and <code>align-items</code>.
+						</p>
+					</li>
+				</ul>
+
+				<br>
+				<div class="body-header" style="padding:0px 30px;">Reading Responses</div>
+				<div class="body" style="padding:0px 30px;">
+					<p>In this part of the assignment, you will be reading <b><a
+								href="https://medium.muz.li/ui-interactions-of-the-week-110-119e45b3df54">this
+								article</a></b> related to web design principles and responding to a few questions. The
+						purpose of this section is to prompt design thinking and awareness -- we are a design course,
+						after all. Instructions can be found in the design_responses.html file (which is also linked at
+						the bottom of index.html).</p>
+					<p>Within the reading navigation button, add a link so that clicking the word "reading" will
+						redirect to your responses in design_responses.html.</p>
+				</div>
+				<div id="submission">
+					<div id="submission-header">Submission</div>
+					<div id="submission-content">
+						<p>Submit your files to your GitHub Submission Repository by copying all the files from
+							hw5-starter into
+							the hw5 folder of your submission repository (replace the index.html originally in it).
+							In your terminal, from your GitHub Submission Repository, run the following Git commands:
+						</p>
+						<ul>
+							<li>git add -A</li>
+							<li>git commit -m 'finished hw5'</li>
+							<li>git push</li>
+						</ul>
+						<p>This assignment is due <strong>Thursday, October 12th</strong> at <strong>6:30PM
+								PST</strong>.</p>
+					</div>
+				</div>
+			</div>
+</body>
+
+</html>

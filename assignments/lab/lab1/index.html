@@ -1,0 +1,224 @@
+<!-- Explorer starts here -->
+<!-- Explorer ends here -->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hands-on 1</title>
+    <link rel="stylesheet" type="text/css" href="-mark2html-resources\assets\styles\atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="-mark2html-resources\assets\styles\style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header-caption">
+                <img id="header-caption-logo" src="-mark2html-resources\assets\images\logo.png">
+                <div id="header-caption-name">Web Design DeCal</div>
+            </div>
+            <div id="header-content">
+                <div id="header-title">Hands-on 1</div>
+                <div id="header-due">September 19th</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="block block-highlight">
+
+                <p>This lab will get us more familiar with HTML tags, and how we can combine them to structure our
+                    webpage. Try to do as much as possible, but if you don't finish, that's alright.</p>
+                <p>Throughout the lab, it might help to refer back to <a
+                        href="https://docs.google.com/presentation/d/18EcDKIO5l9D8qr30I7zJYWyVk1p4YUNY0lCJjX7i1hI/edit?usp=sharing"
+                        target="_blank">this week's
+                        slides</a> if you'd like to revisit a concept from lecture.</p>
+
+            </div>
+
+            <div class="body-header">Assignment</div>
+            <p class="caption">We have provided you with the backbone for this lab. You can download the assignment file
+                here:</p>
+            <a class="download_button" href="assets/lab1-starter.zip">
+                <div class="download">Download File</div>
+            </a>
+            <p>Here's what we'll be building: an HTML version of a wireframe design of an Airbnb-style webpage.</p>
+            <p><img src="assets\screenshot.png" alt="Our HTML skeleton." /></p>
+            <h2 id="part-1-setting-down-the-structure">Part 1: Setting Down the Structure</h2>
+            <p>Open <code>index.html</code> in the <code>starter</code> folder of the zip file you downloaded for this
+                lab.</p>
+            <p>We'll start our HTML document with a few foundational tags, as shown below. Let's break down what these
+                tags do (or how the browser interprets them).</p>
+            <pre><code class="html language-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-comment">&lt;!-- The title that shows on the tab in the browser! --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Your content here! --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+            <p><em>(This is review from lecture; feel free to continue on if you understand what these tags mean, but
+                    make sure that you're comfortable with this structure before you continue on!)</em></p>
+            <ul>
+                <li>
+                    <p><code>&lt;!doctype html&gt;</code> tells the browser what type of document this is. In this case,
+                        it knows that this is an HTML 5 document; this is the declaration we'll always use throughout
+                        this class.</p>
+                </li>
+                <li>
+                    <p>The <code>&lt;html&gt;</code> tag is where your entire document lives. Aside from the document's
+                        declaration, all of the other tags in your document will go inside of this one in a valid HTML
+                        page.</p>
+                </li>
+                <li>
+                    <p>The <code>&lt;head&gt;</code> tag stores information about your HTML document, like links to
+                        certain resource files that your document may use (more on this soon!), or the title or author
+                        of the page. None of this content ever displays on the webpage itself--users won't be able to
+                        see it, but it's a good way to indicate metadata about the page to computers.</p>
+                    <ul>
+                        <li>Try using <code>&lt;title&gt;</code> so that the text on the tab in the browser will no
+                            longer say <code>index.html</code>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>The <code>&lt;body&gt;</code> tag is home to the content of your page! All of the elements that
+                        you see on a webpage come from here.</p>
+                </li>
+                <li>
+                    <p>Any text surrounded with <code>&lt;!--</code> and <code>--&gt;</code> is a comment. The browser
+                        will ignore comments; you can use them to leave notes to yourself about how you wrote part of
+                        your code or what it does, changes you need to make to a webpage, and so on.</p>
+                </li>
+            </ul>
+            <p>Notice the closing tags (the slash in <code>&lt;/sometag&gt;</code>) and nested structure (tags inside of
+                tags, indented to make the structure easier to read), as covered in lecture! These tell your browser how
+                to read through your HTML code properly.</p>
+            <h2 id="part-2-creating-content">Part 2: Creating Content</h2>
+            <p>Now, we'll dive into the content!</p>
+            <p>Let's first add a heading. Recall that <code>&lt;h1&gt;</code> is displayed as large, bold text by
+                default.</p>
+            <pre><code>&lt;h1&gt;Book <span class="hljs-keyword">unique</span> places <span class="hljs-keyword">to</span> stay <span class="hljs-keyword">and</span> things <span class="hljs-keyword">to</span> <span class="hljs-keyword">do</span>.&lt;/h1&gt;</code></pre>
+            <p>The Airbnb page that our skeleton is based on is broken up into sections that tell users about an
+                experience with a title and a description. Each section follows the same structure, but has different
+                content. Let's create the first section:</p>
+            <pre><code class="html language-html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/house.png"</span> /&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Size-two heading --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Extraordinary homes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+       A selection of places to stay verified for quality and design.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+            <p><em>(If you're thinking, "What's this <strong>Lorem Ipsum</strong> thing?" it's a common piece of
+                    placeholder text used in design. Check out this <a
+                        href="https://en.wikipedia.org/wiki/Lorem_ipsum">Wikipedia entry on it</a>.)</em></p>
+            <p>We use a few of the most common tags in this section:</p>
+            <ul>
+                <li><code>&lt;section&gt;</code> is a semantic tag that represents a distinct section of a webpage. It
+                    is actually no different than <code>&lt;div&gt;</code>, but the word <code>section</code> makes your
+                    code make more sense when you read it, as opposed to <code>div</code>, which is just a generic box.
+                </li>
+                <li><code>&lt;img&gt;</code> displays an image, whose file name is specified in <code>src</code>.</li>
+                <li><code>&lt;h2&gt;</code> is the second most prominent kind of header. Sizes range from 1 through 6;
+                    just change the number next to <code>h</code> to use headers of other levels of hierarchy. For
+                    example, <code>&lt;h1&gt;</code> is the biggest header, and <code>&lt;h6&gt;</code> is the smallest.
+                </li>
+                <li><code>&lt;p&gt;</code> tags enclose a paragraph of text. Even if you put text on multiple lines in a
+                    <code>&lt;p&gt;</code> tag, they'll all appear in a single paragraph.
+                </li>
+            </ul>
+            <p>Once you understand these tags, add the structure above to the <code>&lt;body&gt;</code> of your
+                document.</p>
+            <p>At this point, you should view the webpage you're building to make sure it looks like what you expect. To
+                view your webpage, find your <code>index.html</code> file, and open it in your browser (double-click on
+                the file Finder on Mac or File Explorer on Windows); you should see something similar to the image shown
+                at the start of this lab, albeit missing a few sections, once you've finished this part of the lab.
+            </p>
+            <p>Go ahead and create 2 more sections like this one! We've included images <code>city.png</code> and
+                <code>sushimaking.png</code> in the <code>img</code> folder for you to use.
+            </p>
+            <h4 id="tips-to-success">Tips to success:</h4>
+            <ul>
+                <li>Think about parent-child relationships of different elements on a webpage--headers, images,
+                    paragraphs, quotations… How do parent-child relationships between different sections of a site help
+                    make it clearer to understand?</li>
+                <li>Put comments in <code>&lt;!-- comment tags --&gt;</code>.</li>
+            </ul>
+            <h2 id="part-3-creating-the-header">Part 3: Creating the Header</h2>
+            <p>The <code>&lt;header&gt;</code> of a document is different from its <code>&lt;head&gt;</code> (despite
+                the similarity in names)--and in fact, also belongs in the <code>&lt;body&gt;</code>! It's a semantic
+                HTML tag used for storing content that you would see in the header bar at the top of a page like a
+                title, a search bar, and some user information. Like <code>&lt;div&gt;</code> and
+                <code>&lt;section&gt;</code>, it's like a box to contain your content, but we choose to use
+                <code>&lt;header&gt;</code> instead of <code>&lt;div&gt;</code> so that our html as more meaning. We'll
+                create ours for this skeleton using the structure below:
+            </p>
+            <pre><code class="html language-html"><span class="hljs-comment">&lt;!-- Put the top of the page --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- We can put an image in a link --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"home"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Navigation block (links to other pages), also semantic! --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"become-host"</span>&gt;</span>Become a Host<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"sign-up"</span>&gt;</span>Sign up<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"log-in"</span>&gt;</span>Log in<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- don't forget to close the header tag! --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code></pre>
+            <p>In this header, we use a few new tags:</p>
+            <ul>
+                <li><code>&lt;nav&gt;</code> is a semantic tag for creating a section of the page responsible for
+                    navigating to other pages on the website. Functionality-wise, it is no different than
+                    <code>&lt;div&gt;</code>, but it is useful for browsers (like screen readers targeting disabled
+                    users) to know what what the major navigation links are. It also makes your code easier to read as
+                    opposed to <code>&lt;div&gt;</code>s everywhere!
+                </li>
+                <li><code>&lt;ul&gt;</code> stands for <em>unordered list</em>. By default, the browser indicates this
+                    with bullet points. <code>&lt;li&gt;</code> stands for <em>list item</em>. You usually don't see
+                    bullet points next to navigation links on a website, and later in the class we'll learn to remove
+                    them, but again, we want to make our html document meaningful.</li>
+                <li><code>&lt;a&gt;</code> is an anchor tag, which acts as a link to another webpage or another part of
+                    the webpage you're working on. When you click on the link, it'll go to the page or URL set as the
+                    <code>href</code> value.
+                </li>
+            </ul>
+            <p>In your <code>index.html</code>, add the code for the header section from the box above once you
+                understand these new tags. Be sure to view the page to see what you've created.</p>
+            <p>You're done! Congrats on finishing your first WDD lab!</p>
+            <!-- Body ends here -->
+
+        </div>
+        <div class="section">
+            <h2>Submission</h2>
+            <div class="block block-highlight">
+
+                <!-- Submission info starts here -->
+                <div id="submission-content">
+                    <p>Submit your files to your GitHub Submission Repository by copying all the files inside the
+                        "starter" folder into the lab1 folder of your submission repository (replace the index.html
+                        originally in it). In your terminal, from your GitHub Submission Repository, run the following
+                        Git commands:</p>
+                    <ul>
+                        <li>git add -A</li>
+                        <li>git commit -m 'finished lab1'</li>
+                        <li>git push</li>
+                    </ul>
+                    <p>This assignment is due Tuesday, September 19th at 7:00PM PST.</p>
+                </div>
+                <!-- Submission info ends here -->
+
+            </div>
+        </div>
+</body>
+
+</html>
+<!-- @webdesigndecal/mark2html@0.0.11 -->

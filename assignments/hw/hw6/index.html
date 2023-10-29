@@ -1,0 +1,290 @@
+<!-- Explorer starts here -->
+<!-- Explorer ends here -->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD Homework 6</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header-caption">
+                <img id="header-caption-logo" src="assets/images/logo.png">
+                <div id="header-caption-name">Web Design DeCal</div>
+            </div>
+            <div id="header-content">
+                <div id="header-title">Homework 6</div>
+                <div id="header-due">October 19th</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="block block-highlight">
+
+                <p>Welcome to the CSS Animation Homework! <b>Feel free to review this week's <a
+                            href="https://docs.google.com/presentation/d/1sdmJykqPS3s4u6IQl6UrYpPgQGLtCvlSpiAmVVkUbWI/edit?usp=sharing">slides</a>
+                        before starting!</b></p>
+                <p>Throughout this homework, be sure to note the differences between transitions and animations--when
+                    might you want to use one over the other?</p>
+                <p>In our discussion of keyframe animation, it also proves useful from a design standpoint to think
+                    about how the easing (or pacing, based on a timing function) of an animation changes the way that it
+                    feels to a user; these intuitive senses can have a strong impact on users' perceptions of a brand.
+                </p>
+                <p>We hope to show you the power of pure CSS animation -- many animations are built using JavaScript,
+                    but CSS alone pulls an incredible amount of weight!</p>
+                <p>You can download the assignment file here:</p>
+                <a href="hw6-starter.zip" style="text-decoration:none;">
+                    <div class="download">Download Assignment</div>
+                </a>
+
+            </div>
+
+            <!-- Body starts here -->
+            <h1 id="overview">Overview</h1>
+            <p>All changes will be made in the <code>style.css</code> and <code>index.html</code> files. We'll be
+                recreating four classic loading animations often seen on landing pages and webapps based on our
+                discussion of keyframes in lecture.</p>
+            <p>As always, if you'd like to have a guide on hand or use external resources to further support your
+                learning, CSS Tricks has a <a href="https://css-tricks.com/almanac/properties/a/animation/">simple
+                    reference on the CSS animation property</a>. If you're interested in furthering your learning, be
+                sure to check out our footnotes on other modes of web animation and other related topics.</p>
+            <p>By the end of this homework, you'll have built a collection like this <em>(refresh the page if the GIF
+                    stops playing)</em>:</p>
+            <!-- <p><img src="assets/images/final.gif" alt="Finished collection of loaders " /></p> -->
+            <video width="660" controls autoplay muted>
+                <source src="assets/images/loading.mp4" type="video/mp4">
+            </video>
+            <h1 id="css-animation-fundamentals">CSS Animation Fundamentals</h1>
+            <p><strong>Animations</strong> in CSS are a series of changes made to an element's properties over time.
+                They act much like transitions, but where transitions can only make one change to a property, animations
+                can change a property many times in succession, which creates an animated effect. We define animations
+                in CSS using <strong>keyframes</strong>, which allow us to set the state of our properties at certain
+                times in the animation, usually defined as percentages. To apply or add an animation to an element, we
+                use the <strong>animation property</strong>, which is a shorthand property for the animation's name,
+                duration, easing, and delay, among other properties. Animation <strong>easings</strong> or
+                <strong>timing functions</strong> allow us to change the rate at which the animation is completed.
+            </p>
+            <h1 id="part-0-understanding-the-document">Part 0: Understanding the Document</h1>
+            <p>The skeleton code for this homework is a bit lengthy; read on for a short explanation of its structure.
+            </p>
+            <p>The <code>#loaders</code> container is what we'll be interested in in this homework--it stores all of the
+                loader containers, which store the cards that you see on the page. Loader containers should be
+                structured like so:</p>
+            <pre><code class="html language-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"loader-container"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"loader-card"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"loader number"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Elements for the loader go in here! --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"bg"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/div&gt;</span></code></pre>
+            <p>Where <code>.bg</code> is the background, shadow, and label of the card, <code>.loader-card</code> is the
+                card with the content itself, and <code>.loader</code> is the loader that the card displays, with
+                <code>.number</code> replaced with the number of that loader.
+            </p>
+            <p>You'll also notice that the document has somewhat responsive behavior; by using a flexbox grid with cards
+                whose width and height are bounded (i.e. using <code>min-width</code> and <code>max-width</code>), we
+                get a responsive effect that handles our cards well. Webpages with more complex responsive functionality
+                would likely use media queries, but they are out of scope for this homework.</p>
+            <p>If you'd like to create more cards, just add a new block of this structure to your HTML below the
+                existing loader containers! Feel free to use this document as a playground.</p>
+            <h1 id="part-1-loader-1-pulse">Part 1: Loader 1, Pulse</h1>
+            <p>We'll start out with a pulsing circle animation. First, create a new <code>.loader.one</code> inside of
+                our first <code>.loader-card</code>:</p>
+            <pre><code class="html language-html">&lt;div <span class="hljs-keyword">class</span>="<span class="hljs-symbol">loader</span> <span class="hljs-symbol">one</span>"&gt;
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">first</span> <span class="hljs-symbol">circle</span>"&gt;&lt;/<span class="hljs-symbol">div</span>&gt;
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">second</span> <span class="hljs-symbol">circle</span>"&gt;&lt;/<span class="hljs-symbol">div</span>&gt;
+&lt;/<span class="hljs-symbol">div</span>&gt;</code></pre>
+            <p>Let's animate it! We'll be making the two <code>.circle</code>s scale up so that they appear to pulse
+                outwards. We'll first need to write a keyframe animation for the scaling. Our animation has just two
+                steps: start at size 0 with opacity 1, and end at full size with opacity 0. Add your animation at
+                <code>PART 1.1</code> in <code>style.css</code>.
+            </p>
+            <p><em>Hint: You can use the <code>transform: scale(&lt;scale factor&gt;)</code> property to
+                    <code>transform</code> the circles' size. Since we only have two steps, you can use the
+                    <code>from</code> and <code>to</code> rules in your keyframe animation. The scale factor here is
+                    some positive number, with 1 being the original size of the circle.</em></p>
+            <p>Next, add this animation to your circles using the <code>animation</code> property (make the change at
+                <code>PART 1.2</code>). Your animation should last 2 seconds and repeat infinitely.
+            </p>
+            <p>At this point, your circle will pulse outwards, but it'll seem like there's only one circle. This is
+                because both circles are growing at the same rate and at the same time. How should we fix this? We can
+                delay the second circle's animation, so that it begins to grow after the first circle does! Add this
+                animation delay to the second circle at <code>PART 1.3</code>. You've completed your first loader!</p>
+            <h1 id="part-2-loader-2-wave">Part 2: Loader 2, Wave</h1>
+            <p>Our second loader is a series of dots that move up and down in a wave. In this case, our animation has
+                three steps:</p>
+            <ul>
+                <li>The starting position, which is the same as its current position.</li>
+                <!-- <li>The starting position, again.</li> -->
+                <li>The middle position, where the dot is lifted up.</li>
+                <li>The end position, which is the same as the starting position. </li>
+                <!-- <li>The end position, again.</li> -->
+            </ul>
+            <p>We want to duplicate the first and last positions so that the animation will be a faster wave compared to
+                if we only had three stages. Since we have more than two states between which we'd like to animate, we
+                can use percentages to define our keyframe animation. In order to change the positions of the dots, we
+                can use the <code>transform: translateY</code> property.</p>
+            <p>We'll first add to our second <code>.loader-card</code> a new <code>.loader.two</code> made up of three
+                dots in a flexbox:</p>
+            <pre><code class="html language-html">&lt;div <span class="hljs-keyword">class</span>="<span class="hljs-symbol">loader</span> <span class="hljs-symbol">two</span>"&gt;
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">first</span> <span class="hljs-symbol">dot</span>"&gt;&lt;/<span class="hljs-symbol">div</span>&gt;
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">second</span> <span class="hljs-symbol">dot</span>"&gt;&lt;/<span class="hljs-symbol">div</span>&gt;
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">third</span> <span class="hljs-symbol">dot</span>"&gt;&lt;/<span class="hljs-symbol">div</span>&gt;
+&lt;/<span class="hljs-symbol">div</span>&gt;</code></pre>
+            <p>At the parts labeled <code>PART 2</code>…</p>
+            <ul>
+                <li>Write a <code>@keyframes</code> block for the wave animation</li>
+                <li>Add the wave animation to our dots so that it lasts 2 seconds and loops forever.</li>
+                <li>Delay the animation for the second and third dots, so that each one is delayed by 0.25 seconds more
+                    than the last. (In other words, the second dot should have a delay of 1/4 of a second, and the third
+                    should start 1/4 second after the second.)</li>
+                <li>Color the second (<code>#4DB1F7</code>) and third (<code>#7DE76A</code>) dots.</li>
+            </ul>
+            <p>You've completed your second loader! As long as the animation looks fairly similar to the GIF, you should
+                be good!</p>
+            <h1 id="part-3-loader-3-flip-tile">Part 3: Loader 3, Flip tile</h1>
+            <p>Our third loader is a flipping tile. Here, we'll need to introduce 3D transformations in CSS! Just as we
+                can rotate or scale an element in two dimensions using the transformations that we've explored so far,
+                so too can we rotate and transform elements in 3D. To do so, CSS transformations support
+                <code>rotateX()</code> and <code>rotateY()</code> functions, which rotate our element along the x and y
+                axes. CSS also has a <code>perspective()</code> transformation; we can understand
+                <code>perspective()</code> by considering the browser window to be like a camera in a 3D space.
+            </p>
+            <p>Suppose that our webpage is a wall, and our camera is filming it head-on. In this case,
+                <code>perspective()</code> acts like our camera's zoom functionality: we can choose a lower perspective
+                value if we want our camera to be closer to the wall, and a higher perspective value if we want our
+                camera to be farther from the wall. The farther away we are, the less drastic an animation's effects
+                will be in 3D space (play around with <code>perspective()</code> to get a feel for this yourself!).
+            </p>
+            <p>CSS 3D transforms are tricky and sometimes hard to visualize, so don't be afraid to grab a TA or
+                instructor and ask if you need an extra hand. To create our flipping tile (at the parts labeled
+                <code>PART 3</code>)…
+            </p>
+            <ul>
+                <li>Create a new loader once more--this time, all that needs to be placed inside of our
+                    <code>.loader.three</code> is a single <code>&lt;div class="flip-tile"&gt;</code>.
+                </li>
+                <li>Add styling to our <code>flip-tile</code> in CSS by setting the height and width to 100px, and the
+                    color to be #F98527.</li>
+                <li>Write the <code>@keyframes</code> animation for our tile. We should have three different points in
+                    the animation:<ul>
+                        <li>We should first start with just the perspective of 300px
+                            (<code>transform: perspective(300px)</code>)</li>
+                        <li>In the second step, we want the card to be flipped in the Y-direction. We can do this with
+                            <code>transform: perspective(300px) rotateY(180deg)</code>. (The <code>perspective()</code>
+                            should stay here.)
+                        </li>
+                        <li>In the last step, we want the card to be flipped <em>both horizontally and vertically</em>,
+                            so we'll add <code>rotateX(180deg)</code> and while copying over what we have for stage 2.
+                        </li>
+                    </ul>
+                </li>
+                <li>Apply the animation to our tile so that it lasts 2.6 seconds and runs forever.</li>
+            </ul>
+            <p>You've completed your third loader!</p>
+            <h1 id="part-4-challenge-loader-4-spin">Optional Part 4: Challenge! Loader 4, Spin</h1>
+            <p>Our fourth loader adds a bit more complexity, and uses two animations: first, we make our concentric
+                rings spin; and second, we apply a change in color all throughout to create an animated gradient.
+                Although we won't necessarily apply two animations to one element in this loader, know that we can! To
+                apply two animations to the same element, we can simply separate the animations with commas:</p>
+            <pre><code class="css language-css"><span class="hljs-built_in">animation</span>: <span class="hljs-built_in">first</span> 1s infinite, <span class="hljs-built_in">second</span> 2s infinite;</code></pre>
+            <p>We'll first add our new loader:</p>
+            <pre><code class="html language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"loader four"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rings"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+            <p>Our <code>.rings</code> div will store all of the ring elements that we'll animate. Since we can't easily
+                create arcs with variable sizes in CSS, we instead use the following structure for each ring:</p>
+            <ul>
+                <li>Use an outer div with a circular shape to contain all other elements. We'll call this
+                    <code>.ring</code>.
+                </li>
+                <li>Use an inner div with a circular shape smaller than the outer div to hide the elements within. We'll
+                    call this <code>.mask</code>.</li>
+                <li>Use a rectangle masked by the outer and inner divs to create an arc. We'll call this
+                    <code>.arc-container</code>.
+                </li>
+                <li>Color only half of the rectangle (i.e. create an inner rectangle) so that the arc displays on only
+                    one side of the ring. We'll call this <code>.arc</code>.<br />
+                    The resulting structure for each ring looks like this:</li>
+            </ul>
+            <pre><code class="html language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"ring one"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"arc-container"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"arc"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"mask"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+            <p>We'll ultimately have 3 rings (sorry, Ariana Grande fans).</p>
+            <p>Given this structure, we'll want to animate a few things:</p>
+            <ul>
+                <li>To spin the rings, we rotate our rectangle.</li>
+                <li>To give our spin a bit more life, we change the <code>border-radius</code> of our arc-container to
+                    shorten and lengthen the arc.</li>
+                <li>To change the color of our rings, we change the background color of our arc.</li>
+            </ul>
+            <p>We want our animation to look very continuous with no changes in the speed of the animation, so for this
+                animation, we'll change our ease, or timing curve! By default, CSS uses <code>ease-in-out</code>, but
+                we'll instead use a <code>linear</code> ease for our spinning animation.</p>
+            <p>Given these parameters, write your animation at the parts labeled <code>PART 4</code>.</p>
+            <ul>
+                <li>All rings should continue to rotate forever.</li>
+                <li>The first ring should finish rotating in 1 second and finish changing color in 2.2 seconds.</li>
+                <li>The second ring should spin and change color more slowly than the first ring. Its color animation
+                    should run in reverse.</li>
+                <li>The third ring should spin faster than the first ring and change color more slowly than the second
+                    ring.</li>
+                <li>Your color animation can have as many stops (changes of states, or percentage points) as you'd like!
+                    We recommend using three to four colors; don't forget to make the color loop back to the same color
+                    it was originally in your animation. We used #10D4C6, #3068CD, #7910D4, and #41EA97.</li>
+                <li>The second ring should be delayed by 0.2 seconds, and the third ring should be delayed by 0.1
+                    seconds.</li>
+            </ul>
+            <p>You've completed your fourth loader!</p>
+            <p>Congrats on finishing your first foray into CSS animation! CSS independently is extremely powerful--it
+                can be used to create a wide array of engaging displays. If you're interested in learning more about
+                animation, be sure to explore JavaScript-based animation once we start learning JavaScript!</p>
+            <!-- Body ends here -->
+        </div>
+
+        <div class="section">
+            <h2>Reading Responses</h2>
+            <div class="body">
+                <p>In this part of the assignment, you will be reading <b><a
+                            href="https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9">this
+                            article</a></b> related to animations in UX design and responding to a few questions. The
+                    purpose of this section is to prompt design thinking and awareness -- we are a design course, after
+                    all. Instructions can be found in the design_responses.html file.</p>
+                <p>Within the p tags, replace "[INSERT YOUR RESPONSE HERE]" with your responses in
+                    design_responses.html.</p>
+            </div>
+        </div>
+
+        <div id="submission">
+            <div id="submission-header">Submission</div>
+            <div id="submission-content">
+                <p>Submit your files to your GitHub Submission Repository by copying all the files from
+                    hw6-starter into
+                    the hw6 folder of your submission repository (replace the index.html originally in it).
+                    In your terminal, from your GitHub Submission Repository, run the following Git commands:
+                </p>
+                <ul>
+                    <li>git add -A</li>
+                    <li>git commit -m 'finished hw6'</li>
+                    <li>git push</li>
+                </ul>
+                <p>This assignment is due <strong>Thursday, October 19th</strong> at <strong>6:30PM
+                        PST</strong>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- @webdesigndecal/mark2html@0.0.11 -->

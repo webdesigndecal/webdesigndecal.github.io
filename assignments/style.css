@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 8px;
+    font-family: 'Karla';
+    background: #f7f5f2;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.card {
+    background-color: #78c272;
+    width: 100%;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.homeworks {
+    width: 33%;
+    padding: 16px;
+}
+
+.labs {
+    width: 33%;
+    padding: 16px;
+}
+
+.project {
+    width: 33%;
+    padding: 16px;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+p {
+    color: white;
+}

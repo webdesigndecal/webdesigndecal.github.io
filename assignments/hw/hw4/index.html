@@ -1,0 +1,193 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<title>WDD Homework 4</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/img/logo.png"></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Homework 4</div>
+				<!-- DUE DATE -->
+				<div id="header-due">October 5</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Travel Blog</div>
+				<div class="info-content">
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Learn to use CSS position properties by styling a travel blog page!</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+
+				<p>For this homework we are going to be making a travel blog! Blogs are super common websites, so let's
+					try it out. You can download the assignment file here:</p>
+				<a href="assets/hw4-starter.zip">
+					<div class="download">Download Assignment</div>
+				</a>
+				<p>As usual, you'll find <strong>index.html</strong> and <strong>style.css</strong>. We will only be
+					adding CSS.</p>
+
+				<h2>Part 1: CSS Positioning</h2>
+				<p>
+					When you open index.html, it should look like the screenshot below. <em>Don't worry about that
+						random blue rectangle,</em> we'll be fixing it.
+				</p>
+				<img src="assets/img/initial.png" alt="">
+
+				<strong>Problem 1</strong>
+				<p>Add CSS (use the <code>position</code> property) so that the header bar will stick to the top as we
+					scroll down the page.</p>
+
+				<strong>Problem 2</strong>
+				<p>We have a <code>&lt;div class="content"&gt;</code> that contains our page content, so that it's only
+					800px wide. Use the <code>margin</code> property so that our content is centered on the page.</p>
+				<p>The page should now look like this:</p>
+				<img src="assets/img/aligncontent.png" alt="">
+
+				<p>See that random blue rectangle? We're fixing that next.</p>
+
+				<p>For problems 3 through 6, we'll be making the image cards on the bottom of the page. There are four
+					relevant html elements for these problems.
+				<ul>
+					<li><code>.image-card</code> contains the whole card, which has:</li>
+					<ul>
+						<li>The <code>img</code> - one is of Seattle and the other is of New York</li>
+						<li>
+							<code>.image-card-color-overlay</code> - When we hover over the pictures, we want a color
+							overlay to appear over it. This div is the colored rectangle that will go on top.
+						</li>
+						<li><code>.image-card-text</code> - This is the text that will go on top of each card, which
+							will say Seattle or New York</li>
+					</ul>
+				</ul>
+				</p>
+
+				<p><strong><em>READ CAREFULLY to understand CSS positioning!!</em></strong></p>
+				<p>
+					Recall that elements with <code>position: absolute</code> can be positioned with the
+					<code>top</code>, <code>left</code>, <code>bottom</code>, and <code>right</code> properties, like a
+					coordinate system where (0, 0) is at the top left corner. However, (0, 0) is not always the top left
+					corner <em>of the whole screen</em>. It is actually the <em>parent element</em> that has
+					<code>position: relative</code>.
+				</p>
+				<img src="assets/img/positiondiagram.png" alt="css position absolute/relative diagram">
+				<p>In our code, <code>.image-card</code> is the <em>parent</em> of
+					<code>.image-card-color-overlay</code>, and we want to position the color overlay inside the overall
+					card, with the top left corner of the card as the (0, 0) coordinate.</p>
+
+				<p>We're going to make the cards look like this, where the left shows the hover effect:</p>
+				<img src="assets/img/hovereffect.png" alt="">
+
+				<strong>Problem 3</strong>
+				<p>
+					Since we will want to position <code>.image-card-color-overlay</code> based on its parent,
+					<code>.image-card</code>, give <code>.image-card</code> the appropriate <code>position</code>
+					property.
+				</p>
+
+				<strong>Problem 4</strong>
+				<p>Look at the CSS for <code>.image-card-color-overlay</code>, it says
+					<code>top: 50px; left: 200px;</code>. Previously, it was 50px from the top edge of the screen and
+					200px from the left edge of the screen, which is why there was that random blue rectangle. Now it's
+					50px from the top edge of <code>.image-card</code> and 200px from the left edge of the card.</p>
+				<p>Now, change the <code>top</code> and <code>left</code> values so that the blue rectangle covers the
+					image:
+					<img src="assets/img/covered.png" alt="">
+				</p>
+
+				<strong>Problem 5</strong>
+				<p>We only want the blue rectangle to show as a hover effect. There are two places in the css that
+					specify the <code>opacity</code>. Change one or both so that the image only turns blue when hovered
+					over.</p>
+
+				<strong>Problem 6</strong>
+				<p>
+					If you look in the html, we have <code>&lt;div class="image-card-text"&gt;Seattle&lt;/div&gt;</code>
+					and <code>&lt;div class="image-card-text"&gt;New York&lt;/div&gt;</code>, but the text is nowhere to
+					be seen!
+				</p>
+				<p>Look at the three lines of positioning code we used in <code>.image-card-color-overlay</code>. Do a
+					similar thing for <code>.image-card-text</code> so that the text is at the bottom left corner of the
+					card.</p>
+
+				<h2>Part 2: Typography</h2>
+				<p>Your page should now look like this:</p>
+				<img src="assets/img/almostdone.png" alt="">
+				<p>
+					Currently this page has pretty bad typography! For this part, it is up to you to improve the visual
+					design of the page. Requirements:
+				<ul>
+					<li>Incorporate the typography principles from class</li>
+					<li>Use at least 1 font from Google Fonts (<strong><a
+								href="https://developers.google.com/fonts/docs/getting_started"
+								target="_blank">instructions here</a></strong>)</li>
+					<li>Add css for all text elements on the page, which is <code>#title</code>, <code>h1</code>,
+						<code>h2</code>, <code>h3</code>, <code>p</code>, and <code>.image-card-text</code>.</li>
+				</ul>
+				Here are some of the relevant css properties:
+				<ul>
+					<li><code>font-family</code></li>
+					<li><code>font-size</code></li>
+					<li><code>font-weight</code></li>
+					<li><code>line-height</code></li>
+					<li><code>color</code></li>
+					<li><code>margin</code></li>
+				</ul>
+				</p>
+
+				<div class="body-header">Reading Response</div>
+				<p>In this part of the assignment, you will be reading <a
+						href="https://www.invisionapp.com/inside-design/color-accessibility-product-design/"
+						target="_blank">this article</a> related to web design principles and responding to a few
+					questions.
+					The purpose of this section is to prompt design thinking and awareness -- we are a design course,
+					after all.
+					Instructions can be found in the design_responses.html file (which is also linked at the bottom of
+					index.html).</p>
+
+				<p>Within the p tags, replace "[INSERT YOUR RESPONSE HERE]" with your responses in
+					design_responses.html.</p>
+
+			</div>
+		</div>
+		<div id="submission">
+			<div id="submission-header">Submission</div>
+			<div id="submission-content">
+				<p>Submit your files to your GitHub Submission Repository by copying all the files from hw4-starter into
+					the hw4 folder of your submission repository (replace the index.html originally in it).
+					In your terminal, from your GitHub Submission Repository, run the following Git commands:</p>
+				<ul>
+					<li>git add -A</li>
+					<li>git commit -m 'finished hw4'</li>
+					<li>git push</li>
+				</ul>
+				<p>This assignment is due <strong>Thursday, October 5</strong> at <strong>6:30PM PST</strong>.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

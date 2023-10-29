@@ -1,0 +1,126 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>WDD Lab 6</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<style type="text/css"></style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png"></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Lab 6</div>
+				<!-- DUE DATE -->
+				<div id="header-due">October 24th</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Animations and Keyframes</div>
+				<div class="info-content">
+					<!-- INTRODUCTION -->
+					<div class="info-intro">If you haven't watched lecture/read <b><a
+								href="https://docs.google.com/presentation/d/1sdmJykqPS3s4u6IQl6UrYpPgQGLtCvlSpiAmVVkUbWI/edit?usp=sharing">the
+								slides</a></b> yet, please do so before attempting this lab! We'll be going into
+						animations, which bring an extra touch of excitement to your website.</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+				<p class="caption">You can download the assignment file here:</p>
+				<a href="lab6-starter.zip">
+					<div class="download">Download File</div>
+				</a>
+				<p class="caption">You must NOT make any changes to HTML document in these questions. All of your
+					changes should only be <code>q1.css</code> and <code>q2.css</code>.</p>
+
+				<p class="body-header">Question 1: Transition and Pseudoselectors</p>
+				<p>Remember pseudoselectors? In this problem, we'll be adding pseudoselectors to the button class so
+					they'll animate when hovered over.
+					<br />
+					<br />
+					Add code so that, when hovered over, the buttons rotate 180 degrees, have full opacity, and become a
+					circle. These changes should be smooth (we're animating, after all!) and take 0.45 seconds. See the
+					video below for the final result.
+				</p>
+
+				<video width="660" controls>
+					<source src="assets/images/q1.mov" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+
+				<p class="body-header">Question 2: Keyframes and Animations</p>
+				<p></p>
+
+
+				<p>In this part, we'll be working with keyframes, which give us more control over the animations with
+					how they execute, how long they execute for, etc. We'll be animating a basketball to bounce up and
+					down infinitely, as seen below:</p>
+				<video width="660" controls>
+					<source src="assets/images/q2.mov" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<ul>
+					<li>
+						Part 1: Create a keyframe animation for the ball bounce. The ball should <code>translate</code>
+						from its starting Y value of <code>-200px</code> to <code>30px</code>.
+					</li>
+					<li>
+						Part 2: Create a keyframe animation for the shadow change. The shadow should grow smaller when
+						the ball is closer to the ground, and <code>scale</code> to half its original size.
+						Additionally, the opacity should change from its initial value of <code>0.5</code> to
+						<code>0.6</code>, as shadows get darker when closer to the ground.
+					</li>
+					<li>
+						Part 3: Add both of these keyframes to their respective ids in the CSS. The staff solution takes
+						roughly 0.45 seconds with a timing-function of <code>cubic-bezier(0.42, 0, 0.7, 0.5)</code>, has
+						no delay, repeats infinitely, and alternates (go forward and back). However, there is more than
+						one way to animate; go with whatever keyframe combination/animation options makes most sense to
+						you!
+					</li>
+				</ul>
+				</p>
+			</div>
+			<div class="section">
+				<h2>Submission</h2>
+				<div class="block block-highlight">
+
+					<!-- Submission info starts here -->
+					<div id="submission-content">
+						<p>Submit your files to your GitHub Submission Repository by copying all the files inside the
+							"lab6-starter" folder into the lab6 folder of your submission
+							repository (replace the index.html originally in it). In your terminal, from your GitHub
+							Submission Repository, run the following Git commands:</p>
+						<ul>
+							<li>git add -A</li>
+							<li>git commit -m 'finished lab6'</li>
+							<li>git push</li>
+						</ul>
+						<p>This assignment is due Tuesday, October 24th at 7:00PM PDT.</p>
+					</div>
+					<!-- Submission info ends here -->
+
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>

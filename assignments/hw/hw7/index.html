@@ -1,0 +1,239 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>WDD Homework 7</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<style type="text/css"></style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png"></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Homework 7</div>
+				<!-- DUE DATE -->
+				<div id="header-due">October 26th</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Intro to JavaScript</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Let's get more comfortable with writing JavaScript. First, we'll be writing
+						a few JS functions to get the hang of it! Then, we will be playing around with the web console
+						to see the different types of functions and variables we can use in JS and how we can display
+						them in the browser.</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+				<!-- Can use CODE Tag for code snippets or references -->
+
+				<a href="hw7-starter.zip">
+					<div class="download">Download Assignment</div>
+				</a>
+
+				<h1>What we'll be doing</h1>
+				<p><em>Before you start this homework, make sure you watch the lecture!</em> Know what variables,
+					functions, parameters, and return values are, since we will be using those.</p>
+
+				<h1>Part 1: File Set-up</h1>
+				<p>
+					So far in class, we've mostly been running JS in the browser console (and we're going to do some
+					more of that later in this homework too). But for this first part, let's actually properly make a JS
+					file and include it in our HTML page!
+				</p>
+				<ol>
+					<li>Create a file named <code>script.js</code> and put it in the <code>assets/js</code> folder. You
+						will only need to edit this JS file for this homework assignment, except for the very next step.
+					</li>
+					<li>Now in <code>index.html</code>, we want to specify where to find the JS file, just like how we
+						tell it where to find the CSS file. Put this inside the <code>head</code> tags in your HTML
+						file, and fill it in with the appropriate file path:
+						<pre><code>&lt;script src="FILE PATH"&gt;&lt;/script&gt;</code></pre>
+						IMPORTANT: Do not edit any other line in your <code>index.html</code> except for adding this
+						<code>script</code> tag!
+					</li>
+				</ol>
+				<p>So now, when the browser loads <code>index.html</code>, it will also load the JS file. Then, as soon
+					as the file is loaded, the browser will proceed to run the JS file line-by-line.</p>
+
+				<h1>Part 2: Writing Functions</h1>
+				<p>For this part of hw, we'll be writing code in the file you just created, <code>script.js</code>.
+					Recall from lecture the structure of a function:
+					<img src="assets/images/functions.png" alt="">
+				</p>
+				<ol>
+					<li>Write a function called <code>averageThreeNumbers</code> that takes 3 arguments and returns the
+						average. Here is a code skeleton:
+						<pre><code>function averageThreeNumbers(a, b, c) {
+    let sum = _________;
+    let ___ = _______;
+    return ___;
+}</code></pre>
+						If you are having a hard time understanding this code skeleton, break it down in terms of what
+						each word represents. Compare the code with the function structure above. What is
+						<code>sum</code>? What are you calculating in the second line? What do you ultimately want to
+						<code>return</code>?
+					</li>
+
+					<li>Write a function called <code>createSentence</code> that takes two arguments: a number called
+						<code>num</code> and a string called <code>noun</code>. The function should return a string in
+						this format: <code>On average, a Berkeley student has [num] [noun]s.</code> For example: when
+						you call <code>createSentence(12, "squirrel")</code>, the function should return
+						<code>On average, a Berkeley student has 12 squirrels.</code> <br><br>If you have previous CS
+						experience already, try doing this function with a <a
+							href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+							target="_blank">template string</a>.
+					</li>
+
+					<li>Make a function called <code>getRandomNum</code> that takes one argument, a number called
+						<code>max</code>, and returns a random number between 0 and <code>max</code> (exclusive). JS has
+						a built-in function called <code>Math.random()</code> that, when called, gives us a random
+						number between 0 and 1 (exclusive). Here, you want to be able to adjust the <code>max</code>
+						value to a number other than 1. Take a look at <a
+							href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/math/random">this
+							page</a>, which contains documentation and examples about this <code>Math.random()</code>
+						function, to figure out how to do so.
+						<p class="caption">(You can get to that page by googling "mdn javascript random". In the future,
+							it's helpful to add "mdn" to your google search, since the Mozilla Developer docs are an
+							industry standard, and usually the most reliable).</p>
+					</li>
+
+				</ol>
+
+				<h1>Part 3: Playing with the web console</h1>
+				<p>So you wrote the three JS functions in Part 2, but how do you know that they output the correct
+					expected result?</p>
+				<p>At the end of this assignment, your <code>index.html</code> should look like this. Every time you
+					refresh the page, you should see new values for each of the 5 variables in your window. Verify that
+					the <code>avg</code> variable is the correct mathematical average of <code>x</code>, <code>y</code>,
+					and <code>z</code>, and that your <code>sentence</code> variable is a string that uses the
+					<code>avg</code> value correctly. You will also be uploading a screenshot of your web console output
+					after you finish Part 3.2.
+				</p>
+				<img src="assets/images/console_sols.png" alt="">
+				<p>If you look into your <code>index.html</code> file, you will notice that at the bottom of the page,
+					there is another <code>script</code> tag that contains some inline JS that runs once everything
+					above it is finished loading. Inside the <code>window.onload</code> function (a function that
+					automatically runs once the window is loaded), we use <code>document.getElementById</code>, which is
+					a very useful function that we will cover in the next lecture. But for now, don't worry about the
+					content of our <code>index.html</code>!</p>
+				<h1>Part 3.1: Function calling and variables</h1>
+				<p>We need to call our three functions in order to invoke the expected action on our parameters. But, in
+					order to preserve the return value from these functions, we need to store them in variables.</p>
+				<ol>
+					<li>In your <code>script.js</code> file, after you declared your three functions that you finished
+						in Part 2, declare three new variables, called <code>x</code>, <code>y</code>, and
+						<code>z</code>.
+						Assign the return value of <code>getRandomNum</code> when <code>max</code> is equal to 20 to the
+						variable <code>x</code>. Do the same for <code>y</code> when <code>max</code> is 10, and
+						<code>z</code> when <code>max</code> is 13. Each line of code should resemble:
+						<pre><code>let _ = getRandomNum(__);</code></pre>
+					</li>
+					<li>Next, we will use our <code>averageThreeNumbers</code> function. As you may recall, it takes in
+						3 arguments and returns the average of the 3 numbers. Call this function on <code>x</code>,
+						<code>y</code>, and <code>z</code>, and assign the average value to a new variable called
+						<code>avg</code>.
+					</li>
+					<li>Almost there! We will then use our <code>createSentence</code> function to construct a sentence
+						using the average number <code>avg</code> from Step 3 and the name of your favorite animal.
+						Assign the returned string value to a new variable called <code>sentence</code>.</li>
+					<li>You should now have 5 different variables (<code>x</code>, <code>y</code>, <code>z</code>,
+						<code>avg</code>, and <code>sentence</code>) initialized with the return values from calling
+						those 3 functions! Let's add one final line to our JS file:
+						<pre><code>console.log(sentence);</code></pre>
+					</li>
+				</ol>
+				<p>We're done writing our <code>script.js</code> file! Let's go to our <code>index.html</code> file in
+					our browser to see what happens!</p>
+
+				<h1>Part 3.2: <code>console.log</code></h1>
+				<p>For this part, we're going to use the console. We're going to type JS code line-by-line into the
+					console, so that we can really understand what is happening.</p>
+				<p>For this class we'll be providing instructions for using the console and tools in Google Chrome.
+					Other browsers like Firefox have their own, similar console and web developer tools, but for
+					consistency we recommend that you follow along using Chrome.</p>
+				<p>To get to the console:
+				<ol>
+					<li>Make sure your <code>index.html</code> file is opened in Chrome.</li>
+					<li>Right-click anywhere on the page and select Inspect Element. Alternatively, you can cmd/ctrl +
+						shift + i.</li>
+					<li>Click on the Console tab shown below.</li>
+					<img src="assets/images/console.png" alt="">
+				</ol>
+				</p>
+				<p>We recommend that you have two browser windows open side-by-side, with this page on the left and
+					<code>index.html</code> on the right, so that you can follow the instructions easily.
+				</p>
+
+				<ol>
+					<li>You should see something printed in the console log! If you don't, go back to Part 3.1 and
+						figure out what you did wrong.</li>
+					<li>Let's manually type some commands in our console. Our console serves as a temporary JS file,
+						where we can declare variables and functions and return their values. Type out the following in
+						your console:
+						<pre><code>let num = getRandomNum(100);</code></pre>
+						What does the console log say? Think about what this line of code does and if it is supposed to
+						return any value.
+					</li>
+					<li>Next, call <code>getRandomNum</code> again, but this time using <code>num</code> as the max
+						value, and not assigning the return value of this function to any variable.
+						What does the console log say? Why is this output different from the previous step's console
+						output?</li>
+					<li>What is our <code>num</code> variable? Let's type this in our console:
+						<pre><code>num</code></pre>
+					</li>
+					<li>Finally, screenshot your console log output and upload it into your assignment folder, labeling
+						the image as <code>console.png</code>.</li>
+				</ol>
+				<br>
+				<div class="body-header">Design Response</div>
+				<p>As usual, complete this week's reading response in <a
+						href="hw7/design_responses.html">design_responses.html</p></a>
+			</div>
+		</div>
+
+
+
+		<div class="section">
+			<div class="body-header">Submission</div>
+			<div class="block block-highlight">
+
+				<p>Submit your files to your GitHub Submission Repository by copying all the files from
+					hw7-starter into the hw7 folder of your submission repository (replace the index.html originally in
+					it). In your terminal, from your GitHub Submission Repository, run the following Git commands:
+				</p>
+				<ul>
+					<li>git add -A</li>
+					<li>git commit -m 'finished hw7'</li>
+					<li>git push</li>
+				</ul>
+				<p>This assignment is due <strong>Thursday, October 26th</strong> at <strong>7:00PM
+						PT</strong>.</p>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

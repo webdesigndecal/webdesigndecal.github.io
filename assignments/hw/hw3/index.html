@@ -1,0 +1,137 @@
+<html>
+
+<head>
+	<title>WDD Homework 3</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/img/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Homework 3</div>
+				<!-- DUE DATE -->
+				<div id="header-due">September 28</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">3. Let's make Finstas!</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Text Editor, lots of pictures, and the <a href="hw3-starter.zip"
+							download>starter files!</a></div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">This assignment is to practice using the CSS Box Model and getting used to
+						the different properties each section has.</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+
+				<p class="caption"><b>Note:</b> Please review the <b><a
+							href="https://docs.google.com/presentation/d/1Bnh9YsU_qQP-sAK9_ZlJgRz8BdzUpy4HUYzljBaUR_Q/edit?usp=sharing">lecture
+							slides</a></b> before you go through this assignment.</p>
+				<p>In this assignment, You will be creating a mocked fake instagram (also known as a finsta) for
+					yourself. We've provided some starter code (download link is below), but it's your job to fill out
+					the information and make it look pretty!</p>
+				<a href="hw3-starter.zip">
+					<div class="download">Download Assignment</div>
+				</a>
+				<p>To start off, let's flesh out the information in the HTML to make it personalized and about you. Open
+					up index.html in the text editor (VS Code, Sublime, etc) of your choice and fill out the following:
+				</p>
+				<ol>
+					<li>In the div with the id "username", put in your name.</li>
+					<li>In the div with the id "about", type one short sentence or phrase about yourself.</li>
+					<li>Place one profile picture of yourself in the assets/img folder.</li>
+					<li>In the image tag inside the div with the id "profile-pic", place the image of yourself from the
+						step above. Horizontal photos work better than vertical ones for this assignment, although
+						square ones are the best. Vertical photos will end up having a gray edge on both sides, but
+						that's fine!</li>
+					<li>Place up to 9 images of your choice in the assets/img folder. Horizontal photos work better than
+						vertical ones for this assignment, and square ones are the best.</li>
+					<li>In the image tag inside the divs with the class "item", place the images from the step above.
+						<b>They won't show up yet, because we haven't done the styling for it in the next section!</b>
+					</li>
+				</ol>
+				<p>Now that your Instagram is all personalized, you are ready to start fixing the styling. </p>
+				<p>Here are the steps to giving your Instagram some <b>visual hierarchy</b>:
+				<ol start="0">
+					<li>Link your CSS to your HTML file by adding the appropriate linking tag in the head tag of your
+						HTML. All the steps below will be in the style.css file. Please do not unlink the .initial.css
+						file, as it contains basic starter styling.
+						<br><b>Note that <code>head</code> and <code>header</code> are different tags.</b>
+						<br><b>Also because we haven't added any CSS to our style.css file, you will not see any changes
+							to the website.</b>
+					</li>
+					<li>Notice that there's a small white margin around the top and bottom (and although you can't see
+						it, sides). Each HTML document starts with a margin of around 8 pixels. Set the margin to 0 for
+						both the HTML and body.</li>
+					<li>Select the profile picture and use the border-radius property to make it a circle. Then, use the
+						overflow property to ensure that the image inside the div is cropped by its parent. (Play around
+						or search online to figure out what values it takes!)</li>
+					<li>Follow button: add 5px to the top and bottom, and 30px to the left and right.</li>
+					<li>Turn each of the posts into a square with a 120 pixel height and 120 pixel width.</li>
+					<li>Create a 10px horizontal space between items.</li>
+					<li>Create a 10px vertical space between each row.<br><b>HINT:</b> If you're having issues with
+						vertical margins, look at <b><a
+								href="https://css-tricks.com/what-you-should-know-about-collapsing-margins/">this
+								link</a></b> for help!</br></li>
+					<li>Add 20px of space between each of the navigation bar items.</li>
+					<li>Create a hover effect, so that items will have full opacity when hovered over. It should also
+						have a transition period of 0.2 seconds.</li>
+					<li>Create an effect for the follow button, so the font becomes
+						size 18 px when clicked. As a result, the button will become larger when clicked on.</li>
+					<li>Add a hover effect such that the text of the navigation turns completely opaque when hovered
+						over.</li>
+					<li>In one selection, make the follow button, picture items, and nav bar items have a pointer
+						cursor.</li>
+				</ol>
+				</p>
+
+				<p class="caption">If you are lost during this assignment, do not fret! Post to Ed or come to office
+					hours.</p>
+				<p>Your finsta should look something like this:</p>
+				<img class="img-scaled" src="assets/img/example.png" style="margin-bottom: 40px">
+				<div class="body-header">Reading Responses</div>
+				<p>In this part of the assignment, you will be reading <b><a
+							href="https://medium.com/free-code-camp/typography-can-make-your-design-or-break-it-7be710aadcfe">this
+							article</a></b> related to web design principles and responding to a few questions. The
+					purpose of this section is to prompt design thinking and awareness -- we are a design course, after
+					all. Instructions can be found in the design_responses.html file (which is also linked at the bottom
+					of index.html).
+
+				<p>Within the p tags, replace "[INSERT YOUR RESPONSE HERE]" with your responses in
+					design_responses.html.</p>
+
+			</div>
+
+		</div>
+		<div id="submission">
+			<div id="submission-header">Submission</div>
+			<div id="submission-content">
+				<p>Submit your files to your GitHub Submission Repository by copying all the files from hw3-starter into
+					the hw3 folder of your submission repository (replace the index.html originally in it).
+					In your terminal, from your GitHub Submission Repository, run the following Git commands:</p>
+				<ul>
+					<li>git add -A</li>
+					<li>git commit -m 'finished hw3'</li>
+					<li>git push</li>
+				</ul>
+				<p>This assignment is due <strong>Thursday, September 28th</strong> at <strong>6:30PM PST</strong>.</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
