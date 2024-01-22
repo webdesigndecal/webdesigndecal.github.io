@@ -536,9 +536,9 @@
 		};
 	
 		const state = {
-			semester: "Fall 2023", // used in content strings below
-			mode: "DURING_SEMESTER", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
-			url: "https://forms.gle/Vn7yzZtHRZ5Vmhf76" // GOOGLE FORM URL FOR APPLICATION
+			semester: "Spring 2024", // used in content strings below
+			mode: "DECAL_APPS_OPEN", // options are "DECAL_APPS_OPEN", "DURING_SEMESTER", "TA_APPS_OPEN" (see ctaContent keys below)
+			url: "http://tinyurl.com/wddsp24" // GOOGLE FORM URL FOR APPLICATION
 		};
 		const ctaContent = {
 			"DECAL_APPS_OPEN": {
@@ -574,18 +574,18 @@
 		};
 		const instructorData = [
 			{
-				name: "David Qing",
-				imgSrc: "static/images/david-q.jpg",
-				url: "https://www.linkedin.com/in/davidqing/",
-				email: "davidqing@berkeley.edu",
-				blurb: "Hey I'm David! I'm a junior studying Computer Science, and I'll be one of your instructors this semester. I'm super excited to meet everyone, feel free to reach out with any questions!",
+				name: "Kathleen Hua",
+				imgSrc: "static/images/kathleen.png",
+				linkedinUrl: "mailto:https://www.linkedin.com/in/hua-kathleen/",
+				email: "mailto:kathleenhua@berkeley.edu",
+				blurb: "Hello, I’m Kathleen! I’m a sophomore studying Computer Science and I’ll be one of your instructors for WDD this semester. I’m super excited to get to know everyone and share what I know about web design with y’all!",
 			},
 			{
-				name: "Grace Yang",
-				imgSrc: "static/images/grace.jpg",
-				url: "https://www.linkedin.com/in/graceyang-ucb",
-				email: "g.yang11@berkeley.edu",
-				blurb: "Hi I'm Grace! I'm a sophomore this year studying Cognitive Science. I was a TA for WDD last semester, and I'll be one of the instructors this semester! So excited to meet everyone!!",
+				name: "Kylie Noa",
+				imgSrc: "static/images/kylie.jpg",
+				linkedinUrl: "https://www.linkedin.com/in/kylie-p-75ba07209?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+				email: "mailto:criispy@berkeley.edu",
+				blurb: "Hi everyone, I'm Kylie and I'm happy to be one of your instructors this semester! I'm a data science major but find a lot of joy in designing websites. I'm looking forward to sharing that with all of you, feel free to reach out anytime!",
 			},
 		];
 		const taData = [
@@ -600,11 +600,17 @@
 				url: "https://kxllytrxn.github.io/",
 			},
 			{
-				name: "Steven Huang",
-				imgSrc: "static/images/steven_huang.jpg",
-				url: "https://stevenhuang010.github.io/",
+				name: "David Qing",
+				imgSrc: "static/images/david-q.jpg",
+				url: "https://www.linkedin.com/in/davidqing/",
+			},
+			{
+				name: "Grace Yang",
+				imgSrc: "static/images/grace.jpg",
+				url: "https://www.linkedin.com/in/graceyang-ucb",
 			},
 		];
+
 		const faqData = [
 			// {
 			// 	"question": "If I cannot attend part of the lecture or lab, can I still take this class?",
@@ -635,7 +641,7 @@
 		
 			{
 				"question": "When and where are classes?",
-				"answer": `${state.semester} classes will be every <strong> Tuesday&nbsp;7:00&ndash;8:00pm </strong> (Physics 3) and every <strong> Thursday&nbsp;6:30&ndash;8pm </strong> (Physics 3).`
+				"answer": `${state.semester} Labs will be every <strong> Monday&nbsp;7:00&ndash;8:00pm </strong> (Physics 2) and lectures every <strong> Thursday&nbsp;6:30&ndash;8pm </strong> (Physics 2).`
 			},
 			{
 				"question": "Can I take this class for a letter grade?",
